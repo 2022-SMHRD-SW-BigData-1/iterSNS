@@ -21,13 +21,13 @@ function App() {
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    <PostCards />
+    // <PostCards />
     // <MainCard />
     // <LogincopyDR/>
 
 
     // <>
-    // <Mypage2/>
+    <Mypage2/>
     // </>
     // <div className="App">
     //   <Navigation />
