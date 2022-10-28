@@ -10,7 +10,8 @@ import Post from "./Post";
 import Save from "./Save";
 import Mypage2 from "./Mypage2";
 import MainCards from "./MainCards";
-import Logincopy from "./Logincopy"
+import Logincopy from "./Logincopy";
+import Post_JE from "./Post_JE";
 // import Mypage from "./Mypage";
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    <MainCards />
+    // <MainCards />
+    <Post_JE />
     // <>
     // <Mypage2/>
     // </>
