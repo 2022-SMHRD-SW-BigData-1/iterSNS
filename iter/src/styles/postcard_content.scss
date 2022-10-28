@@ -6,18 +6,26 @@
   margin-bottom: 3.5em;
   border-radius: 3px;
   max-height: 1200px;
-  width: 293px;
+  width: 350px;
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75em;
+    width: 350px;
 
     .profile {
       margin-bottom: 0;
     }
 
+    .BsPlusCircle {
+      width: 30px;
+      height: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .cardButton {
       height: 30px;
 
@@ -26,21 +34,22 @@
       }
     }
   }
-  // .contentszz{
-    // max-height:1200px;
 
-    .cardText {
-      width: 293px;
-      height: 600px;
-      display: block;
-    }
-    .cardLocation {
-      width: 293px;
-      height: 50px;
-      display: block;
-    }
+  // .contentszz{
+  // max-height:1200px;
+
+  .cardText {
+    width: 350px;
+    height: 450px;
+    display: block;
+  }
+  .cardLocation {
+    width: 350px;
+    height: 65px;
+    display: block;
+  }
   // }
-  
+
   // .likedBy {
   //   display: flex;
   //   padding-left: 1em;
