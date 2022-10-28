@@ -50,7 +50,7 @@ function MainCards() {
           // accountName="rafagrassetti"
           // storyBorder={true}
           image="https://picsum.photos/800/900"
-          comments={commentsOne}
+          // comments={commentsOne}
           // likedByText="dadatlacak"
           // likedByNumber={89}
           // hours={16}
@@ -58,7 +58,7 @@ function MainCards() {
         <MainCard
           // accountName="mapvault"
           image="https://picsum.photos/800"
-          comments={commentsTwo}
+          // comments={commentsTwo}
           // likedByText="therealadamsavage"
           // likedByNumber={47}
           // hours={12}
@@ -67,7 +67,7 @@ function MainCards() {
           // accountName="dadatlacak"
           // storyBorder={true}
           image="https://picsum.photos/800/1000"
-          comments={commentsThree}
+          // comments={commentsThree}
           // likedByText="mapvault"
           // likedByNumber={90}
           // hours={4}
@@ -80,7 +80,7 @@ function MainCards() {
           // accountName="rafagrassetti"
           // storyBorder={true}
           image="https://picsum.photos/800/900"
-          comments={commentsOne}
+          // comments={commentsOne}
           // likedByText="dadatlacak"
           // likedByNumber={89}
           // hours={16}
@@ -88,7 +88,7 @@ function MainCards() {
         <MainCard
           // accountName="mapvault"
           image="https://picsum.photos/800"
-          comments={commentsTwo}
+          // comments={commentsTwo}
           // likedByText="therealadamsavage"
           // likedByNumber={47}
           // hours={12}
@@ -97,7 +97,7 @@ function MainCards() {
           // accountName="dadatlacak"
           // storyBorder={true}
           image="https://picsum.photos/800/1000"
-          comments={commentsThree}
+          // comments={commentsThree}
           // likedByText="mapvault"
           // likedByNumber={90}
           // hours={4}
@@ -110,7 +110,7 @@ function MainCards() {
           // accountName="rafagrassetti"
           // storyBorder={true}
           image="https://picsum.photos/800/900"
-          comments={commentsOne}
+          // comments={commentsOne}
           // likedByText="dadatlacak"
           // likedByNumber={89}
           // hours={16}
@@ -118,7 +118,7 @@ function MainCards() {
         <MainCard
           // accountName="mapvault"
           image="https://picsum.photos/800"
-          comments={commentsTwo}
+          // comments={commentsTwo}
           // likedByText="therealadamsavage"
           // likedByNumber={47}
           // hours={12}
@@ -127,7 +127,7 @@ function MainCards() {
           // accountName="dadatlacak"
           // storyBorder={true}
           image="https://picsum.photos/800/1000"
-          comments={commentsThree}
+          // comments={commentsThree}
           // likedByText="mapvault"
           // likedByNumber={90}
           // hours={4}

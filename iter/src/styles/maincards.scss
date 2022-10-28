@@ -1,13 +1,17 @@
 @import "variables";
 .cm{
+  position: flex;
+  top: 0;
+  z-index: 2;
   width:100%;
 
   .container{
     display: flex;
     align-content: center;
     justify-content: space-between;
-    max-width: 935px;
-    margin: 0 auto;
+    max-width: 1078px;
+    margin: auto;
+    padding: 50px;
   
       .cards {
         width: 293px;

@@ -20,7 +20,7 @@ function App() {
     //<Save></Save>
     <MainCards />
     // <>
-    // <Mypage2></Mypage2>
+    // <Mypage2/>
     // </>
     // <div className="App">
     //   <Navigation />

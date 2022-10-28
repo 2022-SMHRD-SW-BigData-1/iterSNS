@@ -4,18 +4,23 @@
   border: 1px solid $border-color-grey;
   background-color: $background-white;
   margin-bottom: 3.5em;
+  margin-top: 3.5em;
   border-radius: 3px;
   max-height: 1200px;
   width: 293px;
 
-  header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75em;
 
     .profile {
-      margin-bottom: 0;
+      margin: auto;
+      width: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75em;
     }
 
     .cardButton {
@@ -28,7 +33,7 @@
   }
 
   .cardImage {
-    width: 293px;
+    width: 292px;
     height: 575px;
     display: block;
   }
