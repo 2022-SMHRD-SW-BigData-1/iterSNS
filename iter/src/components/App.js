@@ -11,16 +11,14 @@ import Save from "./Save";
 import Mypage2 from "./Mypage2";
 import MainCards from "./MainCards";
 import Logincopy from "./Logincopy";
-import Post_JE from "./Post_JE";
 // import Mypage from "./Mypage";
-
+import LogincopyDR from "./LogincopyDR";
 function App() {
   return (
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    // <MainCards />
-    <Post_JE />
+    <MainCards />
     // <>
     // <Mypage2/>
     // </>
