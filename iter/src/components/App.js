@@ -16,12 +16,13 @@ import PostCards from "./PostCards";
 import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
 import LogincopyDR from "./LogincopyDR";
+
 function App() {
   return (
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    // <PostCards />
+    <PostCards />
     // <MainCard />
     // <LogincopyDR/>
 
