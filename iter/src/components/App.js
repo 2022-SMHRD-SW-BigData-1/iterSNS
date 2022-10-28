@@ -13,6 +13,7 @@ import MainCards from "./MainCards";
 import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
 import LogincopyDR from "./LogincopyDR";
+import SignInSidecopyDR from "./SignInSidecopyDR";
 function App() {
   return (
     // <Logincopy/>
@@ -20,6 +21,7 @@ function App() {
     //<Save></Save>
     // <MainCards />
     <LogincopyDR/>
+    // <SignInSidecopyDR/>
 
 
     // <>
