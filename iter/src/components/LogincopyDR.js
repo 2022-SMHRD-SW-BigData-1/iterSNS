@@ -38,7 +38,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main"  sx={{ height: '90vh' , width:'140vh'}} >
+      <Grid container component="main"  sx={{ height: '90vh' , width:'140vh'}} className='main'>
         {/* 위 그리드 sx에서 사이즈 조정 */}
         <CssBaseline />
         <Grid 
@@ -49,8 +49,7 @@ export default function Login() {
           sx={{
             backgroundImage: `url(${image})`, // 좌측 배경사진
             backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundColor:'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -60,14 +59,14 @@ export default function Login() {
           <Box className='centerbox' // scss에서 회원가입 박스 위치 조정
             sx={{
               my: 8,
-              mx: 20,
+              mx: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
             }}
           >
             {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.light' }}> */}
-              <img src={logo}></img>
+              <img src={logo} className='logo'></img>
               {/* <LockOutlinedIcon />  */}
               {/* 회원가입 위 아이콘 수정자리 */}
             {/* </Avatar> */}

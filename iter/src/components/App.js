@@ -17,14 +17,20 @@ import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
 import LogincopyDR from "./LogincopyDR";
 import SignInSidecopyDR from "./SignInSidecopyDR";
+import MainCardcopyDR from "./MainCardcopyDR";
+
+
+
+
 function App() {
   return (
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    // <MainCards />
-    <LogincopyDR/>
-
+    // // <MainCards />
+    // <LogincopyDR/>
+    // <SignInSidecopyDR/>
+    <MainCardcopyDR/>
 
     // <>
     // <Mypage2/>

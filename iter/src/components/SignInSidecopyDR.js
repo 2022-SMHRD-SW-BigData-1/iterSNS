@@ -13,7 +13,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import image from "../images/왕짬뽕.jpg";
+import logo from "../images/로고1.png";
 import "../styles/LogincopyDR.scss";
+
+
 
 function Copyright(props) {
   return (
@@ -34,8 +37,9 @@ export default function SignInSide() {
   };
 
   return (
+    
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '90vh' , width: '140vh' }}>
+      <Grid container component="main" sx={{ height: '90vh' , width: '140vh' }} className='main'>
         <CssBaseline />
         <Grid
           item
@@ -43,7 +47,7 @@ export default function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: `url(${image})`,  
+            backgroundImage: `url(${image})`,  // 좌측 이미지
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -61,9 +65,11 @@ export default function SignInSide() {
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar>
+            {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.light' }}> */}
+            <img src={logo} className='logo'></img>
+              {/* <LockOutlinedIcon />  */}
+              {/* 회원가입 위 아이콘 수정자리 */}
+            {/* </Avatar> */}
             <Typography component="h1" variant="h5">
               로그인
             </Typography>
@@ -96,10 +102,11 @@ export default function SignInSide() {
                 type="submit"
                 fullWidth
                 variant="contained"
+                color='secondary'
                 sx={{ mt: 3, mb: 2 }}
               >
                 로그인
-              </Button>
+              </Button> 
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
