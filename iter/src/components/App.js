@@ -10,15 +10,18 @@ import Post from "./Post";
 import Save from "./Save";
 import Mypage2 from "./Mypage2";
 import MainCards from "./MainCards";
-import Logincopy from "./Logincopy"
+import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
-
+import LogincopyDR from "./LogincopyDR";
 function App() {
   return (
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    <MainCards />
+    // <MainCards />
+    <LogincopyDR/>
+
+
     // <>
     // <Mypage2></Mypage2>
     // </>
