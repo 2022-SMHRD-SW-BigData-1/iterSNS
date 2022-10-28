@@ -4,10 +4,8 @@ import avatar from "../../images/lorde.png";
 
 const PInfo = () => {
   return (
+    
     <div className="info">
-      <br></br>
-      <br></br>
-      <br></br>
       <Row>
         <Col xs="12" md="4" className="text-center">
           <img

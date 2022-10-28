@@ -7,10 +7,10 @@ function Navigation() {
   return (
     <div className="navigation">
       <div className="container">
-        <img className="logo" src={logo} alt="instagram logo"/>
+        <div className="imgbox"><img className="logo" src={logo} alt="instagram logo"/></div>
         <div className="search">
-          <img className="searchIcon" src={searchIcon} alt="search icon" />
-          <span className="searchText">Search</span>
+        <img className="searchIcon" src={searchIcon} alt="search icon" />
+        <input className="searchBox" type="text" placeholder="Search"></input>
         </div>
         <Menu />
       </div>

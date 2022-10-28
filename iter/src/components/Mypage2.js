@@ -20,8 +20,6 @@ export default function ResponsiveGrid() {
   return (
     <>
       <Navigation></Navigation>
-      <br></br>
-      <br></br>
       <PInfo></PInfo>
 
       <Box
