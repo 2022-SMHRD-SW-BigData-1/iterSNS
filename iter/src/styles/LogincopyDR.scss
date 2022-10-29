@@ -1,9 +1,15 @@
-body
-{
+// 메인창 가운데 정렬 및 높낮이 조절
+.main {
   margin: 0 auto;
-  width: 300px;
+  margin-top: 50px;
 }
 // 회원가입 창 박스
 .centerbox {
     margin-top: 500px;
+}
+// 로고사이즈 
+.logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
 }
