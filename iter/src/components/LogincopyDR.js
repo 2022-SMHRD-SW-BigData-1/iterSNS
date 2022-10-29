@@ -122,7 +122,7 @@ export default function Login() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                color='secondary'
+                color='info'
                 sx={{ mt: 3, mb: 2 }}
               >
                 회원가입

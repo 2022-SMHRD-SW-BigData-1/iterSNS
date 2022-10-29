@@ -16,18 +16,28 @@ import PostCards from "./PostCards";
 import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
 import LogincopyDR from "./LogincopyDR";
+
+import FollowerDR from "./FollowerDR";
+import FollowingDR  from "./FollowingDR ";
+import AlramDR from "./AlramDR";
+
+
+
+
 function App() {
   return (
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    <PostCards />
+    // <PostCards />
     // <MainCard />
     // <LogincopyDR/>
-
+    <FollowerDR/>
+    // <FollowingDR/>
+    // <AlramDR/>
 
     // <>
-    <Mypage2/>
+    // <Mypage2/>
     // </>
     // <div className="App">
     //   <Navigation />
