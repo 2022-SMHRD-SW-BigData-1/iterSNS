@@ -15,6 +15,7 @@ const PInfo = () => {
     } = props;
   }
   return (
+    <>
       <div className="info">
 
         <div className="container">
@@ -32,8 +33,8 @@ const PInfo = () => {
             </div>
           </div>
         </div>
-
-    </div>    
+    </div>
+    </>
   );
 };
 

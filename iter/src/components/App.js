@@ -1,21 +1,23 @@
 import "../styles/App.scss";
-import Navigation from "./Navigation";
-import Cards from "./Cards";
-import Sidebar from "./Sidebar";
-import Login from "./Login";
-import { Route, Routes } from "react-router-dom";
-import Mainimage from "./Mainimage";
-import Profile from "./Profile";
-import Post from "./Post";
-import Save from "./Save";
-import Mypage2 from "./Mypage2";
-import MainCards from "./MainCards";
-import MainCard from "./MainCard";
-import PostCard from "./PostCard_img";
+// import Navigation from "./Navigation";
+// import Cards from "./Cards";
+// import Sidebar from "./Sidebar";
+// import Login from "./Login";
+// import { Route, Routes } from "react-router-dom";
+// import Mainimage from "./Mainimage";
+// import Profile from "./Profile";
+// import Post from "./Post";
+// import Save from "./Save";
+// import Mypage2 from "./Mypage2";
+// import MainCards from "./MainCard/MainCards";
+// import MyCards from "./MyCards";
+// import MainCard from "./MainCard";
+// import PostCard from "./PostCard_img";
 import PostCards from "./PostCards";
-import Logincopy from "./Logincopy";
+
+// import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
-import LogincopyDR from "./LogincopyDR";
+// import LogincopyDR from "./LogincopyDR";
 
 function App() {
   return (
@@ -23,12 +25,14 @@ function App() {
     // <Post></Post>
     //<Save></Save>
     <PostCards />
-    // <MainCard />
-    // <LogincopyDR/>
 
+    // <MainCards />
+    // <LogincopyDR/>
+    // <Navigation/>
+    // <MyCards></MyCards>
 
     // <>
-    <Mypage2/>
+    // <Mypage2/>
     // </>
     // <div className="App">
     //   <Navigation />

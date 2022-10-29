@@ -14,25 +14,11 @@ function PostCard_content(props) {
         <header>
           <Profile iconSize="medium" storyBorder={storyBorder} />
           <BsPlusCircle className="BsPlusCircle"></BsPlusCircle>
-          {/* <CardButton className="cardButton" /> */}
         </header>
         <div className="contentzz">
           <input type="text" className="cardText" alt="card content" />
           <input type="text" className="cardLocation" alt="card content" />
         </div>
-        {/* <MainCardMenu /> */}
-
-        {/* <div className="comments">
-        {comments.map((comment) => {
-          return (
-            <Comment
-              key={comment.id}
-              accountName={comment.user}
-              comment={comment.text}
-            />
-          );
-        })}
-      </div> */}
       </div>
     </>
   );
