@@ -25,14 +25,12 @@ function App() {
     // <Post></Post>
     //<Save></Save>
     <PostCards />
-
-    // <MainCards />
+    // <MainCard />
     // <LogincopyDR/>
-    // <Navigation/>
-    // <MyCards></MyCards>
+
 
     // <>
-    // <Mypage2/>
+    <Mypage2/>
     // </>
     // <div className="App">
     //   <Navigation />
