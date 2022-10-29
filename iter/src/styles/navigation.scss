@@ -3,28 +3,28 @@
 .navigation {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   background-color: #FDF5D2;
-  width: 100%;
   border-bottom: 1px solid $border-color-grey;
+  width: 100vw;
 
   .container {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 62.5em;
+    width:100vw;
     margin: auto;
-    // padding: 50px;
     
-    .imgbox{
-      width: 293px;
+    .logobox{
+      max-width: 18.3em;
+      width: 100vw;
       float:left;
-      margin-left: 1em;
-      margin-right: 1em;
-
+      margin: auto;
       .logo {
         padding: 0 1em;
-        width: 105px;
+        max-width: 6.5em;
+        width: 100vw;
   
         &:hover {
           cursor: pointer;
@@ -33,47 +33,38 @@
     }
 
     .search {
-      width: 293px;
+      max-width: 18.3em;
+      width: 100vw;
       text-align: center;
       float:left;
-      margin-left: 1em;
-      margin-right: 1em;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      // border: px solid $border-color-grey;
-      // border-radius: 3px;
-      // background-color: #FDF5D2;
-      // min-width: 300px;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
+      margin: auto;
 
       .searchIcon {
-        width: 20px;
-        height: 20px;
+        max-width: 1.3em;
+        width: 100vw;
+        max-height: 1.3em;
+        height:100vh;
         opacity: 0.8;
         margin-right: 0.5em;
-        margin-bottom: 10px;
+        margin-bottom: 0.5em;
       }
 
       .searchBox {
         border:none;
-        width:250px;
-        height:35px;
         overflow: auto;
-        font-size: 1.3em;
-        font-weight: 600px;
-        margin-top:10px;
-        margin-bottom:10px;
+        font-size: 1vw;
       }
     }
 
     .menubox{
-      width: 293px;
+      max-width: 18.3em;
+      width: 100vw;
       text-align: center;
       float:left;
       margin-left: 1em;
       margin-right: 1em;
+      margin-bottom: 1em;
+      
 
       .menu {
         display: flex;
@@ -85,8 +76,10 @@
         .icon {
           margin-left: 0.5em;
           margin-right: 0.5em;
-          width: 23px;
-          height: 23px;
+          max-width: 1.45em;
+          width:100vw;
+          max-height: 1.45em;
+          height: 100vh;
       
           &:hover {
             cursor: pointer;
@@ -96,8 +89,10 @@
         .profileIcon {
           margin-left: 0.5em;
           margin-right: 0.5em;
-          width: 30px;
-          height: 30px;
+          max-width: 2em;
+          width:100vw;
+          max-height: 2em;
+          height:100vh;
         }
       }
 

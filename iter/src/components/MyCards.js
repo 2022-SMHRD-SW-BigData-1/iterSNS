@@ -1,6 +1,6 @@
-import "../styles/mycards.scss";
-// import Stories from "./Stories";
 import MyCard from "./MyCard";
+
+import "../styles/mycards.scss"
 
 function MyCards() {
 
@@ -8,6 +8,7 @@ function MyCards() {
 
     <div className="cm">
       <div className="container" >
+
         <div className="cards" >
           <MyCard image="https://picsum.photos/800/900"/>
           <MyCard image="https://picsum.photos/800"/>

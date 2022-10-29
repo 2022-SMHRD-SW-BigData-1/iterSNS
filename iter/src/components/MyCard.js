@@ -1,12 +1,7 @@
 import "../styles/mycard.scss";
-import Profile from "./Profile";
-import { ReactComponent as CardButton } from "../images/cardButton.svg";
-// import MainCardMenu from "./MainCardMenu";
-// import Comment from "./Comment";
 
 function MyCard(props) {
   const {
-    storyBorder,
     image,
   } = props;
 
