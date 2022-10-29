@@ -13,8 +13,8 @@ import "../styles/App.scss";
 // import MyCards from "./MyCards";
 // import MainCard from "./MainCard";
 // import PostCard from "./PostCard_img";
-import PostCards from "./PostCards";
-
+// import PostCards from "./PostCards";
+import Pinfo from "./profile/PInfo"
 // import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
 // import LogincopyDR from "./LogincopyDR";
@@ -24,13 +24,14 @@ function App() {
     // <Logincopy/>
     // <Post></Post>
     //<Save></Save>
-    <PostCards />
+    // <PostCards />
     // <MainCard />
     // <LogincopyDR/>
+    <Pinfo />
 
 
     // <>
-    <Mypage2/>
+    // <Mypage2/>
     // </>
     // <div className="App">
     //   <Navigation />
