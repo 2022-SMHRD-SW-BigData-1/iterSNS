@@ -1,0 +1,22 @@
+.mycm{
+  width: 100vw;
+  margin:auto;
+
+  .mycontainer{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 62.5em;
+    width: 100vw;
+    margin: auto;
+        
+    .mycards {
+      width: 100vw;
+      text-align: center;
+      justify-content: space-between;
+      float:left;
+      margin: auto;
+    }
+
+}
+}

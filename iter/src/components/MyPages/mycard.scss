@@ -1,0 +1,21 @@
+.mycard {
+  // position: fixed;
+  // top: 15vh;
+  max-width: 15em;
+  width: 100vw;
+  margin:auto;
+  margin-top: 15vh;
+  
+  
+  .mycardImage {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 18em;
+    margin: auto;
+    width: 100vw;
+    max-height: 575px;
+    height:100vh;
+    display: block;
+  }
+}

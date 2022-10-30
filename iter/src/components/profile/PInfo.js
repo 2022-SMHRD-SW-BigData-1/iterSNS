@@ -1,6 +1,6 @@
-import "../../styles/pinfo.scss";
+import "./pinfo.scss";
 import React from "react";
-import avatar from "../../images/lorde.png";
+import avatar from "./images/lorde.png";
 import Button2 from "./Buttonfing";
 import Button1 from "./Buttonfer";
 import { BsGear } from "react-icons/bs";
