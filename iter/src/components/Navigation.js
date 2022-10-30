@@ -12,7 +12,7 @@ function Navigation() {
         <img className="searchIcon" src={searchIcon} alt="search icon" />
         <input className="searchBox" type="text" placeholder="Search"></input>
         </div>
-        <Menu />
+        <Menu/>
       </div>
     </div>
   );
