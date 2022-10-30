@@ -75,6 +75,7 @@ export default function Login() {
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <Grid container spacing={2}>
+                {/* 이름 */}
               <Grid item xs={12} sm={6}>
               <TextField
                autoComplete="given-name"
@@ -95,7 +96,30 @@ export default function Login() {
                   name="lastName"
                   autoComplete="family-name"
                 />
+                {/* 주민번호  */}
               </Grid>
+              <Grid item xs={12} sm={6}>
+              <TextField
+               autoComplete="first-Jumin"
+               name="firstJumin"
+               required
+               fullWidth
+               id="firstJumin"
+               label="주민번호 앞번호 입력"
+               autoFocus
+              />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="lastJumin"
+                  label="주민번호 뒷번호 입력"
+                  name="lastJumin"
+                  autoComplete="last-Jumin"
+                />
+              </Grid>
+              {/* 이메일 */}
               <Grid item xs={12}>
                 <TextField
                   required
@@ -106,6 +130,7 @@ export default function Login() {
                   autoComplete="email"
                 />
               </Grid>
+              {/* 비밀번호 */}
               <Grid item xs={12}>
                 <TextField
                   required

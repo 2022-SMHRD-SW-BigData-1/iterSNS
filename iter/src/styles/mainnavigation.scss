@@ -7,7 +7,7 @@
   background-color: #FDF5D2;
   border-bottom: 1px solid $border-color-grey;
   width: 100vw;
-  height: 5vw;
+  height: 10vw;
 
   .container {
     display: flex;
@@ -15,14 +15,14 @@
     justify-content: space-between;
     max-width: 62.5em;
     width:100vw;
-    height: auto;
+
     margin: auto;
     
     .logobox{
       max-width: 18.3em;
       width: 100vw;
       float:left;
-      margin: auto;
+      
       .logo {
         padding: 0 1em;
         max-width: 6.5em;

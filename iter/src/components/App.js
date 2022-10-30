@@ -10,22 +10,24 @@ import "../styles/App.scss";
 // import Save from "./Save";
 // import Mypage2 from "./Mypage2";
 // import MainCards from "./MainCard/MainCards";
-// import MyCards from "./MyCards";
+import MyCards from "./MyCards";
 // import MainCard from "./MainCard";
 // import PostCard from "./PostCard_img";
 import PostCards from "./PostCards";
 
 // import Logincopy from "./Logincopy";
 // import Mypage from "./Mypage";
-// import LogincopyDR from "./LogincopyDR";
+import LogincopyDR from "./LogincopyDR";
 
 import FollowerDR from "./FollowerDR";
 import FollowingDR  from "./FollowingDR ";
 import AlramDR from "./AlramDR";
+import SignInSidecopyDR from "./SignInSidecopyDR";
+import Navigation from "./Navigation";
+import MainNavigation from "./MainNavigation";
+import Test from "./Test";
 
-
-
-
+import AlramDRcopy from "./AlramDRcopy";
 function App() {
   return (
     // <Logincopy/>
@@ -34,22 +36,23 @@ function App() {
     // <PostCards />
     // <MainCard />
     // <LogincopyDR/>
-    <FollowerDR/>
+    // <FollowerDR/>
     // <FollowingDR/>
     // <AlramDR/>
+    // <SignInSidecopyDR/>
+    // <Test/>
+    // <HomebuttonDR/> 
+    <AlramDRcopy/>
+
+
 
     // <>
-    // <Mypage2/>
-    // </>
     // <div className="App">
-    //   <Navigation />
-    //   <main>
-    //     <div className="container">
-    //       <Cards />
-    //       <Sidebar />
-    //     </div>
-    //   </main>
+    //   <MainNavigation />
+    //   <MyCards/>
     // </div>
+    // </>
+   
   );
 }
 

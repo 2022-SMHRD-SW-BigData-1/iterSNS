@@ -14,15 +14,34 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import logo from "../images/로고1.png";
 import image from "../images/왕짬뽕.jpg";
 import Navigation from './Navigation';
-// import mia from "./src/assets/images/mia.png";
-
-// import { Skeleton } from '@mui/material';
 
 
+import Box from '@mui/material/Box';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import "../styles/HomebuttonsDR.scss";
 
 
 
-export default function AlignItemsList() {
+const actions = [
+ 
+  { icon: <BookmarkIcon />, name: 'Save' },
+  { icon: <PersonOutlineIcon />, name: 'Mypage' },
+  { icon: <InstagramIcon />, name: 'Main' },
+];
+
+export default function ControlledOpenSpeedDial() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
+
 
   return (
     <> 
@@ -173,10 +192,36 @@ export default function AlignItemsList() {
           primary="고수닭갈비"/>
           
       </ListItem>
+
+      
       
     </List>
-    
+    <SpeedDial className='buttons'
+        ariaLabel="SpeedDial controlled open example"
+        sx={{ position: 'absolute',bottom: 16, right: 16 ,marginRight: 50 , marginBottom:20}}
+        icon={<SpeedDialIcon />}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={open}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            onClick={handleClose}
+          />
+        ))}
+      </SpeedDial>
     </div>
+    
+    
+      
+   
+ 
+
+    
+    
     </>
   );
 }

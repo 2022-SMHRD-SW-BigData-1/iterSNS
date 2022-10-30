@@ -1,4 +1,4 @@
-import "../styles/navigation.scss";
+import "../styles/mainnavigation.scss";
 import Menu from "./Menu";
 import searchIcon from "../images/searchIcon.png";
 import logo from "../images/로고1투명.png";
