@@ -3,10 +3,7 @@ import Profile from "../Profile/Profile";
 import { ReactComponent as CardButton } from "./images/cardButton.svg";
 
 function MainCard(props) {
-  const {
-    storyBorder,
-    image,
-  } = props;
+  const { storyBorder, image } = props;
 
   return (
     <>
@@ -15,12 +12,9 @@ function MainCard(props) {
           <Profile iconSize="medium" storyBorder={storyBorder} />
           <CardButton className="cardButton" />
         </header>
-        <img className="cardImage" src={image} alt="card content" />      
+        <img className="cardImage" src={image} alt="card content" />
       </div>
     </>
-
-
-
   );
 }
 
