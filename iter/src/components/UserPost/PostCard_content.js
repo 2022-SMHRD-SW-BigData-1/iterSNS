@@ -1,6 +1,6 @@
-import "../styles/postcard_content.scss";
-import Profile from "./Profile";
-import { ReactComponent as CardButton } from "../images/cardButton.svg";
+import "./postcard_content.scss";
+import Profile from "../Profile/Profile";
+// import { ReactComponent as CardButton } from "../images/cardButton.svg";
 // import MainCardMenu from "./MainCardMenu";
 // import Comment from "./Comment";
 import { BsPlusCircle } from "react-icons/bs";

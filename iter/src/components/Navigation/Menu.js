@@ -1,7 +1,7 @@
 import "./navigation.scss";
 import { ReactComponent as Home } from "./images/home.svg";
 import { ReactComponent as Inbox } from "./images/inbox.svg";
-
+import { ReactComponent as Explore } from "./images/explore.svg";
 import { ReactComponent as Notifications } from "./images/notifications.svg";
 import { Link } from "react-router-dom";
 import ProfileIcon from "../Profile/ProfileIcon";
