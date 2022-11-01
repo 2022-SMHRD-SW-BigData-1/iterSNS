@@ -5,6 +5,7 @@ import "../styles/App.scss";
 
 // js파일
 import Login from "./Login/Login";
+import Post from "./UserPost/Post_JE";
 import SignIn from "./Login/SignIn";
 import MainCards from "./Main/MainCards";
 import MyCards from "./MyPages/MyCards";
