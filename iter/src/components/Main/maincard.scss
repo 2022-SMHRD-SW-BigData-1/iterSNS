@@ -1,21 +1,22 @@
-.card {
+.maincard {
   max-width: 15em;
   width: 100vw;
-  margin:auto;
+  margin: auto;
+  margin-bottom: 3em;
 
-  header {
+  .mainheader {
     display: flex;
     align-content: center;
     justify-content: space-between;
     max-width: 18.3em;
-    width:100vw;
-    max-height:3em;
-    height:100vh;
+    width: 100vw;
+    max-height: 3em;
+    height: 100vh;
     margin: auto;
-    
+
     // padding: 50px;
 
-    .profile {
+    .mainprofile {
       width: auto;
       margin: auto;
       justify-content: space-between;
@@ -23,9 +24,9 @@
       padding: 0.75em;
     }
 
-    .cardButton {
+    .maincardButton {
       max-height: 3em;
-      height:100vh;
+      height: 100vh;
 
       &:hover {
         cursor: pointer;
@@ -33,7 +34,58 @@
     }
   }
 
-  .cardImage {
+  .maincardImage {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 18.3em;
+    width: 100vw;
+    height: 575px;
+    display: block;
+  }
+}
+
+.feedcard {
+  max-width: 800px;
+  width: 100vw;
+  max-height: 800px;
+  height: 100vh;
+  margin: auto;
+  margin-bottom: 3em;
+  transform: "translate(-50%, -50%)";
+
+  .feedheader {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 18.3em;
+    width: 100vw;
+    max-height: 3em;
+    height: 100vh;
+    margin: auto;
+
+    // padding: 50px;
+
+    .feedprofile {
+      width: auto;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75em;
+    }
+
+    .feedcardButton {
+      max-height: 3em;
+      height: 100vh;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .feedcardImage {
     display: flex;
     align-content: center;
     justify-content: space-between;

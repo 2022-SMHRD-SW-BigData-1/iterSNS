@@ -1,8 +1,9 @@
-.cm {
+.postcm {
   width: 100vw;
-  margin:auto;
+  margin: auto;
+  margin-top: 8em;
 
-  .container {
+  .postcontainer {
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -10,8 +11,8 @@
     width: 100vw;
     margin: auto;
 
-    .cards {
-      width: 350px;
+    .postcards {
+      width: 357px;
       text-align: center;
       float: left;
       margin-top: 1.5em;

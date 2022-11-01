@@ -1,58 +1,71 @@
 @import "profile";
 
 .info {
-  position:relative;
+  position: relative;
   top: 11.5vh;
-  z-index:9;
+  z-index: 9;
   width: 100vw;
-  margin:auto;
+  margin: auto;
 
-  .container{
+  .container {
     display: flex;
     align-content: center;
     justify-content: space-between;
     max-width: 62.5em;
-    width:100vw;
+    width: 100vw;
     margin: auto;
-    
-    .imgBox{
+
+    .imgBox {
       max-width: 18.3em;
-      width:100vw;
+      width: 100vw;
       text-align: center;
-      float:left;
+      float: left;
       margin: auto;
-      .infoImage{
-        max-width:15em;
-        width:100vw;
-        max-height:15em;
-        height:100vh;
+      .infoImage {
+        max-width: 15em;
+        width: 100vw;
+        max-height: 15em;
+        height: 100vh;
         border-radius: 50%;
       }
     }
 
-    .follow{
-      max-width:36.6em;
-      width:100vw;
+    .follow {
+      max-width: 36.6em;
+      width: 100vw;
       text-align: center;
-      float:left;
-      margin:auto;
+      float: left;
+      margin: auto;
 
-      
-
-      .buttonprofile {
-        max-width: 36em;
-        width:100vw;
-        max-height:2.19em;
-        height: 100vh;
+      .z1 {
+        margin-left: 1.88em;
+      }
+      .profileChange {
+        margin-top: 2em;
+      }
+      .save {
+        width: 3.13em;
+        height: 2.5em;
         background-color: antiquewhite;
         border-color: antiquewhite;
         border-radius: 5px;
+        margin-left: 2em;
+        border: none;
+      }
+      .BsBookmarks {
+        color: black;
+      }
+      .buttonprofile {
+        max-width: 36.6em;
+        width: 100vw;
+        max-height: 2.5em;
+        height: 2.5em;
+        background-color: antiquewhite;
+        border-color: antiquewhite;
+        border-radius: 5px;
+        margin-left: 2em;
+        border: none;
       }
     }
-
-
-
   }
-
-
 }

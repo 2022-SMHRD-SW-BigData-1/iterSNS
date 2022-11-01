@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import logo from "../images/로고1.png";
 import Navigation from "./Navigation";
 import { BsCheckSquare } from "react-icons/bs";
-import "../styles/post.scss";
+import "./post.scss";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -20,8 +20,8 @@ export default function Post() {
   return (
     <>
       <Navigation></Navigation>
-      <div className="zz">
-        <div className="Upload">
+      <div className="postzz">
+        <div className="postupload">
           <BsCheckSquare size={40}></BsCheckSquare>
         </div>
         <Box

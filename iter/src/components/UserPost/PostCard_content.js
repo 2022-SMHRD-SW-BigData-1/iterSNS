@@ -1,18 +1,20 @@
-import "../styles/postcard_content.scss";
-import Profile from "./Profile";
-import { ReactComponent as CardButton } from "../images/cardButton.svg";
+import "./postcard_content.scss";
+import Profile from "../Profile/Profile";
+//import { ReactComponent as CardButton } from "./images/cardButton.svg";
 // import MainCardMenu from "./MainCardMenu";
 // import Comment from "./Comment";
 import { BsPlusCircle } from "react-icons/bs";
+import { BsImage } from "react-icons/bs";
 
 function PostCard_content(props) {
   const { storyBorder, image } = props;
 
   return (
     <>
-      <div className="card">
+      <div className="postcard2">
         <header>
           <Profile iconSize="medium" storyBorder={storyBorder} />
+          <BsImage className="BsImage"></BsImage>
           <BsPlusCircle className="BsPlusCircle"></BsPlusCircle>
         </header>
         <div className="contentzz">
