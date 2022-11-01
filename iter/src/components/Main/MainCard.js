@@ -2,6 +2,7 @@ import "./maincard.scss";
 import Profile from "../Profile/Profile";
 import { ReactComponent as CardButton } from "./images/cardButton.svg";
 
+
 function MainCard(props) {
   const {
     storyBorder,

@@ -24,7 +24,9 @@ router.get('*',(request,respond)=>{
 router.post("/Login", function (request, response) {
   const userID = request.body.email;
   const userPW = request.body.password;
-
+  
+  // response.json({ result: "success" });
+  
   let sql = "select * from member where id=? and pw=?";
   conn.query(sql, [userID, userPW], function (err, rows) {
     if (rows.length > 0) {
@@ -34,12 +36,13 @@ router.post("/Login", function (request, response) {
         // userPN: rows[0].phone,
         // userAD: rows[0].address,
       };      
-      response.redirect("http://127.0.0.1:3000/MainView");
-
+      response.json({ result: "success", id: userID});
+      console.log(userID, userPW)
+  
     } else {
-      response.redirect("http://127.0.0.1:3000/");
+      console.log("로그인 실패")
     }});
-
+    
     // sql = "select * from message where id=?";
     // conn.query(sql, [userID], function(err, rows){
   

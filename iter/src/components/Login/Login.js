@@ -1,4 +1,6 @@
+import { useRef, useState } from "react";
 import * as React from 'react';
+import axios from "axios";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -8,10 +10,13 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from "react-router-dom";
 
 import image from "./images/main.jpg";
 import logo from "./images/mainlogo.png";
 import "./login.scss";
+
+
 
 
 
@@ -24,14 +29,43 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+  const idRef = useRef();
+  const pwRef = useRef();
+  const nav = useNavigate();
+  const [id, setId] = useState("");
+  const handleLogin = (e) => {
+    // form태그가 다른 페이지로 이동시키지 않도록 방지
+    e.preventDefault();
+    console.log("handleLogin!");
+    console.log(idRef.current.value);
+    console.log(pwRef.current.value);
+  
+    // axios.post("보낼 위치", "보낼 데이터")
+    axios.post("http://127.0.0.1:3001/Login", {
+        email: idRef.current.value,
+        password: pwRef.current.value,
+    })
+    .then((result)=>{
+        console.log("데이터 보내기 성공!", result.data.id)
+        // nav("/MainView");
+        console.log("데이터 보내기 성공!", result.data.id)
+        setId(result.data.id);
+    }) // axios로 보낼 위치에 데이터 보내기를 성공하면 then
+    .catch(()=>{
+        console.log("데이터 보내기 실패!")
+    }); // aixos로 보낼 위치에 데이터 보내기를 실패하면 catch
+  
   };
+  
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   console.log({
+  //     email: data.get('email'),
+  //     password: data.get('password'),
+  //   });
+  // };
 
   return (
     
@@ -68,10 +102,10 @@ export default function Login() {
               {/* 회원가입 위 아이콘 수정자리 */}
             {/* </Avatar> */}
             <Typography component="h1" variant="h5">
-              로그인
+              로그인{id}
             </Typography>
-            <form action="http://127.0.0.1:3001/Login" method="post" >
-            {/* <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}> */}
+            {/* <form onSubmit={handleLogin} method="post"> */}
+            <Box component="form" noValidate onSubmit={handleLogin} sx={{ mt: 1 }} method="post">
             <Box>
               <TextField
                 margin="normal"
@@ -81,6 +115,7 @@ export default function Login() {
                 label="이메일 주소"
                 name="email"
                 autoComplete="email"
+                inputRef={idRef}
                 autoFocus
               />
               <TextField
@@ -91,6 +126,7 @@ export default function Login() {
                 label="비밀번호"
                 type="password"
                 id="password"
+                inputRef={pwRef}
                 autoComplete="current-password"
               />
               {/* <FormControlLabel
@@ -120,8 +156,9 @@ export default function Login() {
               </Grid>
               <Copyright sx={{ mt: 5 }} />
             </Box>
-            </form>
+            {/* </form> */}
           </Box>
+            </Box>
         </Grid>
       </Grid>
     </ThemeProvider>

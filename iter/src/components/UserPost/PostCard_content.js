@@ -1,4 +1,4 @@
-import "../styles/postcard_content.scss";
+import "./postcard_content.scss";
 import Profile from "./Profile";
 import { ReactComponent as CardButton } from "../images/cardButton.svg";
 // import MainCardMenu from "./MainCardMenu";

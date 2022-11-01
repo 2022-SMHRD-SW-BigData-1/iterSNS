@@ -1,4 +1,4 @@
-import "../styles/postcards.scss";
+import "./postcards.scss";
 // import Stories from "./Stories";
 import PostCard_img from "./PostCard_img";
 import PostCard_content from "./PostCard_content";

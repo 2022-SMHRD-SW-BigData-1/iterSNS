@@ -3,10 +3,10 @@ import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import logo from "../images/로고1.png";
-import Navigation from "./Navigation";
+import logo from "../../images/로고1.png";
+import Navigation from "../Navigation/Navigation";
 import { BsCheckSquare } from "react-icons/bs";
-import "../styles/post.scss";
+import "./post.scss";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",

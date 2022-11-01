@@ -1,4 +1,4 @@
-import "../styles/postcard_img.scss";
+import "./postcard_img.scss";
 
 function PostCard_img(props) {
   const {
