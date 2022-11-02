@@ -7,12 +7,12 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import "../styles/followerDR.scss";
+import "../Notifications/followerDR.scss";
 
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import logo from "../images/로고1.png";
-import image from "../images/왕짬뽕.jpg";
+import logo from "../Navigation/images/logowhite2.png";
+import image from "../../images/왕짬뽕.jpg";
 
 export default function AlignItemsList() {
   return (
