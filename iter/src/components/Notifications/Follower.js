@@ -7,12 +7,12 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import "../styles/followerDR.scss";
+import "../Notifications/follower.scss";
 
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import logo from "../images/로고1.png";
-import image from "../images/왕짬뽕.jpg";
+import logo from "../Navigation/images/logowhite2.png";
+import image from "../../images/왕짬뽕.jpg";
 // import mia from "./src/assets/images/mia.png";
 
 
@@ -42,21 +42,7 @@ export default function AlignItemsList() {
           {/* / 프로필 사진 넣기/ */}
         </ListItemAvatar>
         <ListItemText className='listtext'
-          primary="허니콤보"
-          // secondary={
-          //   <React.Fragment>
-          //     <Typography
-          //       sx={{ display: 'inline' }}
-          //       component="span"
-          //       variant="body2"
-          //       color="text.primary"
-          //     >
-          //       Ali Connors
-          //     </Typography>
-          //     {" — I'll be in your neighborhood doing errands this…"}
-          //   </React.Fragment>
-          // }
-        />
+          primary="허니콤보"/>
         <Button variant="contained">삭제</Button>
         </ListItem>
         {/* 두번째 팔로워 팔로잉 */}

@@ -1,12 +1,3 @@
-import "./navigationDR.scss";
-import { ReactComponent as Home } from "./images/home.svg";
-import { ReactComponent as Inbox } from "./images/inbox.svg";
-import { ReactComponent as Explore } from "./images/explore.svg";
-import { ReactComponent as Notifications } from "./images/notifications.svg";
-import { Link } from "react-router-dom"
-import ProfileIcon from "../Profile/ProfileIcon";
-
-import image from "../Profile/images/profile.jpg";
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -19,10 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 
-
-
-function Menu() {
-
+export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     
     bottom: false,
@@ -92,44 +80,20 @@ function Menu() {
   );
 
   return (
-    <>
-    <div className="menubox">
-      <nav>
-      <div className="menu">
-      
-        <Link to="/MainView"><Home className="icon" /></Link>
-      
-        <Link to="#"><Inbox className="icon" /></Link>
-      
-        <Link to="/IterMap"><Explore className="icon" /></Link>
-      
-        <Link to="#alram"><Notifications className="icon" /></Link>
-
-        <Link to="/MyPages"><ProfileIcon iconSize="small" image={image} /></Link>
-      </div>
-      </nav>
-    </div>
-
-  <nav id="alram">
     <div>
-        {['bottom'].map((anchor) => (
-          <React.Fragment key={anchor}>
-            <Button onClick={toggleDrawer(anchor, true)}>니얼굴</Button>
-            {/* 바꿀버튼이름</Button> */}
-            <Drawer
-              anchor={anchor}
-              open={state[anchor]}
-              onClose={toggleDrawer(anchor, false)}
-            >
-              {list(anchor)}
-            </Drawer>
-          </React.Fragment>
-        ))}
-      </div>
-    </nav>
-
-    </>
+      {['bottom'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}></Button>
+          {/* 바꿀버튼이름</Button> */}
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
   );
 }
-
-export default Menu;
