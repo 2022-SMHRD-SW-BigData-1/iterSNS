@@ -1,41 +1,23 @@
-
+.MainList{
+    width: 65em;
+    background-color: #fafafa;
+}
 
 .listtext {
     margin-left: 1em;
-    margin-top: 1em;
-}
-.followerbutton {
-   
-    height: 3.250em;
-    margin-left: 61em;
-    margin-right: 30em;
-    margin-top: 3em;
- 
-}
-.alramhome{
-    margin-top: 2em;
-    margin-left: 90em;
-    margin-right: auto;
 }
 
-.mainlist {
-
-    margin-left: 40em;
-    margin-right: 40em;
-
+#AheaderClick{
+    margin-right: 31em;
+    // 메인버튼옆 아이콘버튼
 }
 
-.homebutton {
-    width: 8em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    margin-left: 30em;
-    margin-right: 30em;
+#Aheader{
+    margin-left: 28em;
+    // 메인버튼
 }
-// .logo{
-//     margin-left: 40em;
-//     margin-right: 57em;
-//     margin-top: 2.5em;
-//     width: 200px;
-//     height: 200px;
-// }
+
+#Afollowerbutton {
+    margin-left: 27.5em;
+    //가운데 홈 버튼
+}
