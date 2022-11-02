@@ -1,4 +1,4 @@
-@import "variables";
+@import "../../styles/variables";
 
 .card {
   border: 1px solid $border-color-grey;
@@ -6,7 +6,8 @@
   margin-bottom: 3.5em;
   border-radius: 3px;
   max-height: 1200px;
-  width: 293px;
+  width: 580px;
+  margin-left: 30px;
 
   header {
     display: flex;
@@ -28,8 +29,8 @@
   }
 
   .cardImage {
-    width: 700px;
-    height: 575px;
+    width: 580px;
+    height: 573px;
     display: block;
   }
 
