@@ -31,24 +31,10 @@ export default function AlignItemsList() {
       {/* 첫번째 알림 */}
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src={image}/>
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"/>
           {/* / 프로필 사진 넣기/ */}
         </ListItemAvatar>
-        <ListItemText className='listtext' primary="허니콤보"
-          // secondary={
-          //   <React.Fragment>
-          //     <Typography
-          //       sx={{ display: 'inline' }}
-          //       component="span"
-          //       variant="body2"
-          //       color="text.primary"
-          //     >
-          //       Ali Connors
-          //     </Typography>
-          //     {" — I'll be in your neighborhood doing errands this…"}
-          //   </React.Fragment>
-          // }
-        />
+        <ListItemText className='listtext' primary="허니콤보"/>
        
       {/* 두번째 팔로워 알림 */}
       </ListItem>
