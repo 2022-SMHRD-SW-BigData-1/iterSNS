@@ -19,7 +19,7 @@ function Menu() {
       
         <Link to="#"><Inbox className="icon" /></Link>
       
-        <Link to="/IterMap"><Explore className="icon" /></Link>
+        <Link to="/PostCards"><BsPlusSquare className="icon" /></Link>
       
         <Link to="/Notifications"><Notifications className="icon" /></Link>
 

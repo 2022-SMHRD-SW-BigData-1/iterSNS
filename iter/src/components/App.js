@@ -5,12 +5,12 @@ import "./Main/maincards.scss";
 
 // js파일
 import Login from "./Login/Login";
-import Post from "./UserPost/Post_JE";
+import PostCards from "./UserPost/PostCards";
 import SignIn from "./Login/SignIn";
-import MainCardsDR from "./Main/MainCardsDR";
+import MainCards from "./Main/MainCards";
 import MyCards from "./MyPages/MyCards";
-import IterMap from "./IterMap/IterMap";
-import Notifications from "./Notifications/Alram";
+// import IterMap from "./IterMap/IterMap";
+import Notifications from "./Notifications/TestAlramDR";
 
 
 
@@ -28,7 +28,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn/>} />
         <Route path="/MainView" element={<MainCards/>} />
         <Route path="/MyPages" element={<MyCards/>} />
-        <Route path="/IterMap" element={<IterMap/>} />
+        <Route path="/PostCards" element={<PostCards/>} />
         <Route path="/Notifications" element={<Notifications/>} />
 
 

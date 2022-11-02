@@ -23,16 +23,15 @@ router.get('*',(request,respond)=>{
 
 router.post("/SignIn", function (request, response) {
   const userID = request.body.email;
-  const userPW = request.body.pw;
-  const userName = request.body.phone;
+  const userPW = request.body.password;
+  const userName = request.body.name;
   const userGender = request.body.gender;
-  const userRegNumber = request.body.regnumber1 + request.body.regnumber2;
+  const userRegNumber = request.body.firstJumin + request.body.lastJumin;
 
   console.log("사용자가 입력한 ID : " + request.body.email);
-  console.log("사용자가 입력한 PW : " + request.body.pw);
-  console.log("사용자가 입력한 이름 : " + request.body.phone);
-  console.log("사용자가 입력한 날짜 : " + request.body.address);
-  console.log("사용자가 입력한 성별 : " + request.body.address);
+  console.log("사용자가 입력한 PW : " + request.body.password);
+  console.log("사용자가 입력한 이름 : " + request.body.name);
+  console.log("사용자가 입력한 성별 : " + request.body.gender);
   console.log("사용자가 입력한 주민번호 : " + userRegNumber);
 
   let sql = "insert into t_user(user_id, user_pw, user_name, user_joindate, user_type, user_gender, user_regnumber) values(?, ?, ?, sysdate(), '0', ?, ?)";
