@@ -19,12 +19,24 @@
     .profile {
       margin-bottom: 0;
     }
+
+    .followbutton {
+      color: darkgoldenrod;
+      background-color: antiquewhite;
+      border-color: antiquewhite;
+      margin-right: 10px;
+      border-radius: 10px;
+    }
   }
   .clickText {
     width: 350px;
     height: 280px;
     display: block;
     border: 20px black;
+  }
+  .Pclick_cards {
+    width: 350px;
+    height: 280px;
   }
   .clickLocation {
     width: 350px;
