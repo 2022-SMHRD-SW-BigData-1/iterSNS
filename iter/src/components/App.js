@@ -7,11 +7,14 @@ import "./Main/maincards.scss";
 import Login from "./Login/Login";
 import Post from "./UserPost/Post_JE";
 import SignIn from "./Login/SignIn";
-import MainCardsDR from "./Main/MainCardsDR";
+import SignInDR from "./Login/SignInDR";
+import MainCards from "./Main/MainCards";
 import MyCards from "./MyPages/MyCards";
 import IterMap from "./IterMap/IterMap";
 import Notifications from "./Notifications/Alram";
-
+import Test from "./Test";
+import MainCardsDR from "./Main/MainCardsDR";
+import MenuDR from "./Navigation/MenuDR";
 
 
 function App() {
@@ -30,7 +33,10 @@ function App() {
         <Route path="/MyPages" element={<MyCards/>} />
         <Route path="/IterMap" element={<IterMap/>} />
         <Route path="/Notifications" element={<Notifications/>} />
-
+        <Route path="/Test" element={<Test/>} />
+        <Route path="/SignInDR" element={<SignInDR/>} />
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/MainCardsDR" element={<MainCardsDR/>} />
 
       </Routes>
     </Router>

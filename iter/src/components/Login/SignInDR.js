@@ -147,8 +147,8 @@ export default function Login() {
                 label="Gender"
                 onChange={handleChange}
                 >
-                <MenuItem value={0}>남성</MenuItem>
-                <MenuItem value={1}>여성</MenuItem>
+                <MenuItem value={0}>남</MenuItem>
+                <MenuItem value={1}>여</MenuItem>
                 </Select>
                 </FormControl>
                 </Grid>
