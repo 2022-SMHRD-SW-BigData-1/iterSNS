@@ -11,7 +11,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItem from '@mui/material/ListItem';
 import Button from '@mui/material/Button';
-import "./alramDR.scss";
+import "./alramdr.scss";
 
 
 export default function NestedList() {

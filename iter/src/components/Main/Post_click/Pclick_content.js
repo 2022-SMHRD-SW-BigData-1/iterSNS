@@ -5,6 +5,7 @@ import Profile from "../../Profile/Profile";
 // import Comment from "./Comment";
 import { BsPlusCircle } from "react-icons/bs";
 import { BsImage } from "react-icons/bs";
+import Cards from "../../../components/Cards";
 
 function Pclick_content(props) {
   const { storyBorder, image } = props;
@@ -14,9 +15,12 @@ function Pclick_content(props) {
       <div className="Pclick_contentcard">
         <header className="Pclick_contentheader">
           <Profile iconSize="medium" storyBorder={storyBorder} />
+          <button className="followbutton">follow</button>
         </header>
+
         <div className="Pclick_contentcontent">
-          <textarea className="clickText" />
+          <div className="clickText" />
+          <Cards className="Pclick_cards"></Cards>
           {/* ↓지도api들어갈 자리 */}
           <div type="text" className="clickLocation" alt="card content" />
         </div>

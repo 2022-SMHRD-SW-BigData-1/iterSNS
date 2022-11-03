@@ -33,7 +33,6 @@ export default function Login() {
   const idRef = useRef();
   const pwRef = useRef();
   const nav = useNavigate();
-  const [id, setId] = useState("");
   const handleLogin = (e) => {
     // form태그가 다른 페이지로 이동시키지 않도록 방지
     e.preventDefault();
@@ -48,9 +47,8 @@ export default function Login() {
     })
     .then((result)=>{
         console.log("데이터 보내기 성공!", result.data.id)
-        // nav("/MainView");
-        console.log("데이터 보내기 성공!", result.data.id)
-        setId(result.data.id);
+        nav("/MainView");
+     
     }) // axios로 보낼 위치에 데이터 보내기를 성공하면 then
     .catch(()=>{
         console.log("데이터 보내기 실패!")
@@ -102,7 +100,7 @@ export default function Login() {
               {/* 회원가입 위 아이콘 수정자리 */}
             {/* </Avatar> */}
             <Typography component="h1" variant="h5">
-              로그인{id}
+              로그인
             </Typography>
             {/* <form onSubmit={handleLogin} method="post"> */}
             <Box component="form" noValidate onSubmit={handleLogin} sx={{ mt: 1 }} method="post">
