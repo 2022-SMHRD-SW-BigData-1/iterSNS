@@ -7,19 +7,22 @@ const session_mysql_save = require("express-mysql-session");
 const path = require("path");
 const cors = require("cors");
 
-
-
 // 내부 데이터 정보 --> 세션 저장만을 위한 것이므로 내부db를 쓰자.
 let dbInfo = {
+  // host: "project-db-stu.ddns.net",
+  // user: "campus_h_1024_1",
+  // password: "smhrd1",
+  // port: "3307",
+  // database: "campus_h_1024_1",
+
   host: "127.0.0.1",
   user: "root",
   password: "123456",
-  port: "3307",
-  database: "nodejs_DB",    
+  port: "3306",
+  database: "nodejs_DB",
 };
 
 let fnd_DB = new session_mysql_save(dbInfo);
-
 
 // 정적인 데이터들을 이 디렉토리 밑에 있는 것들을 제공하겠다.
 // app.use(express.static("public"));
@@ -29,12 +32,14 @@ app.use(express.static(path.join(__dirname, "iter", "build")));
 app.use(express.json());
 app.use(cors());
 
-app.use(session({
-  secret: "Fnd",
-  resave: false,
-  saveUninitialized: true,
-  store: fnd_DB
-}));
+app.use(
+  session({
+    secret: "Fnd",
+    resave: false,
+    saveUninitialized: true,
+    store: fnd_DB,
+  })
+);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(router);
