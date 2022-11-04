@@ -28,14 +28,18 @@
         cursor: pointer;
       }
     }
-
+    .plusbtn {
+      background-color: white;
+      border-color: white;
+      border: none;
+    }
     .BsPlusCircle {
-      margin-right: 10px;
+      margin-right: 20px;
       width: 23px;
       height: 23px;
-      &:hover {
-        cursor: pointer;
-      }
+      // &:hover {
+      //   cursor: pointer;
+      // }
     }
     .cardButton {
       height: 30px;
