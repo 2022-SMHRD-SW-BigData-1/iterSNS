@@ -7,10 +7,11 @@ import "./Main/maincards.scss";
 import Login from "./Login/Login";
 import PostCards from "./UserPost/PostCards";
 import SignIn from "./Login/SignIn";
-import MainCardsDR from "./Main/MainCardsDR";
+import MainCards from "./Main/MainCards";
 import MyCards from "./MyPages/MyCards";
 import IterMap from "./IterMap/IterMap";
 import Notifications from "./Notifications/Alram";
+import Test from "./Test"
 
 
 
@@ -31,9 +32,7 @@ function App() {
         <Route path="/PostCards" element={<PostCards/>} />
         <Route path="/Notifications" element={<Notifications/>} />
         <Route path="/Test" element={<Test/>} />
-        <Route path="/SignInDR" element={<SignInDR/>} />
         <Route path="/Login" element={<Login/>} />
-        <Route path="/MainCardsDR" element={<MainCardsDR/>} />
 
       </Routes>
     </Router>

@@ -89,6 +89,16 @@ router.post("/Login", function (request, response) {
   // });
 });
 
+router.get("/Logout", (request, response) => {
+  delete request.session.user;
+  msgarr = [];
+  idqwe = "";
+  seqwe = "";
+
+  console.log("로그아웃 성공!");
+  
+});
+
 router.post("/Userpost", function (request, response) {
   const post = request.body.post;
   const location = request.body.location;

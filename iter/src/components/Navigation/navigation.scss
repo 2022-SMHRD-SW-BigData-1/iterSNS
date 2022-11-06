@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: #fdf5d2;
+  background-color: #FDF5D2;
   border-bottom: 1px solid $border-color-grey;
   width: 100vw;
   height: 5vw;
@@ -15,37 +15,42 @@
     justify-content: space-between;
     max-width: 62.5em;
     width:100vw;
+    height: auto;
     margin: auto;
-
-    .logobox {
-      max-width: 18.3em;
+    
+    .logobox{
+      max-width: 10.3em;
       width: 100vw;
       margin: auto;
+      margin-right: 8em;
+      margin-top: 0.6em;
 
       .navigationlogo {
-        float: left;
+        float:left;
         padding: 0 1em;
         max-width: 17em;
         width: 100vw;
-        max-height: 4.5em;
-        height: 100vh;
-        margin: auto;
-
+        max-height:4.5em;
+        height:10em;
+        margin:auto;
+  
         &:hover {
           cursor: pointer;
         }
       }
     }
 
+    
     .search {
-      max-width: 18.3em;
-      width: 100vw;
+      max-width: 12.3em;
+      width: 60vw;
       text-align: center;
-      float: left;
-      margin: auto;
+      float:left;
+      margin-right: 12em;
+      margin-top: 1.5em;
 
       .searchIcon {
-        position: relative;
+        // position: relative;
         top: 0.3em;
         max-width: 1.3em;
         width: 100vw;
@@ -53,27 +58,37 @@
         height: 100vh;
         opacity: 0.8;
         margin-right: 0.3em;
+        position: absolute;
+        margin-top: 2.2em;
+        margin-left: 3.3em;
       }
 
       .searchBox {
-        border: none;
+        border:none;
         overflow: auto;
-        font-size: 1.5vw;
-        max-height: 1.5em;
-        height: 100vh;
-        background-color: #fdf5d2;
+        font-size: 1vw;
+        max-height:1.5em;
+        height:100vh;
+        // background-color: #FDF5D2;
         border-bottom: 1px solid;
+        text-align: center;
+        max-width: 10.2em;
+        margin-top: 0.5em;
+        margin-left: 5em;
       }
+
     }
 
-    .menubox {
+    .menubox{
       max-width: 18.3em;
       width: 100vw;
       text-align: center;
-      float: left;
+      float:left;
       margin-left: 1em;
       margin-right: 1em;
       margin-bottom: 1em;
+      margin-top: 1em;
+      
 
       .menu {
         display: flex;
@@ -81,30 +96,33 @@
         align-items: center;
         margin-top: 1.25em;
         padding: 0 1em;
-
+        
         .icon {
           margin-left: 0.5em;
           margin-right: 0.5em;
           max-width: 1.45em;
-          width: 100vw;
+          width:100vw;
           max-height: 1.45em;
           height: 100vh;
-          color: black;
-
+      
           &:hover {
             cursor: pointer;
           }
         }
-
+      
         .profileIcon {
           margin-left: 0.5em;
           margin-right: 0.5em;
           max-width: 2em;
-          width: 100vw;
+          width:100vw;
           max-height: 2em;
-          height: 100vh;
+          height:100vh;
         }
       }
+
     }
+    
+
+
   }
 }

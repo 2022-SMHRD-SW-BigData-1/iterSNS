@@ -9,6 +9,8 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Pclick_Cards from "./Post_click/Pclick_Cards";
+import CardContent from '@mui/material/CardContent';
+
 
 const style = {
   position: "absolute",
@@ -59,6 +61,14 @@ function MainCard(props) {
           <Fade in={open}>
             <Box sx={style}>
               <Pclick_Cards />
+              <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography component="div" variant="h5">
+            Live From Space
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="div">
+            Mac Miller
+          </Typography>
+        </CardContent>
             </Box>
           </Fade>
         </Modal>

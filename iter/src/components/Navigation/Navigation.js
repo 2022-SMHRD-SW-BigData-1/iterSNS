@@ -1,7 +1,7 @@
 import "./navigation.scss";
 import Menu from "./Menu";
 import searchIcon from "./images/searchIcon.png";
-import logo from "./images/logowhite2.png";
+import logo from "./images/logowhite3.png";
 import { Link } from "react-router-dom"
 
 function Navigation() {
