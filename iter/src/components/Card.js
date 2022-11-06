@@ -33,7 +33,9 @@ function Card(props) {
         })}
       </div>
       {/* <div className="timePosted">{hours} HOURS AGO</div> */}
+      
       <div className="clickaddComment">
+        <input></input>
         <div className="clickcommentText">Add a comment...</div>
         <div className="clickpostText">Post</div>
       </div>

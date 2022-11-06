@@ -119,4 +119,12 @@ router.post("/Userpost", function (request, response) {
   });
 });
 
+
+router.post("/Comment", function (request, response) {
+
+  const comment = request.body.post;
+
+});
+
+
 module.exports = router;
