@@ -1,29 +1,29 @@
 import "./maincards.scss";
-import MainCardDR from "./MainCard";
-import NavigationDR from "../Navigation/Navigation";
+import MainCard from "./MainCard";
+import Navigation from "../Navigation/Navigation";
 
 function MainCards() {
   return (
     <>
-      <NavigationDR></NavigationDR>
+      <Navigation></Navigation>
       <div className="maincm">
         <div className="maincontainer">
           <div className="maincards">
-            <MainCardDR image="https://picsum.photos/800/900" />
-            <MainCardDR image="https://picsum.photos/800" />
-            <MainCardDR image="https://picsum.photos/800/1000" />
+            <MainCard image="https://picsum.photos/800/900" />
+            <MainCard image="https://picsum.photos/800" />
+            <MainCard image="https://picsum.photos/800/1000" />
           </div>
 
           <div className="maincards">
-            <MainCardDR image="https://picsum.photos/800/900" />
-            <MainCardDR image="https://picsum.photos/800" />
-            <MainCardDR image="https://picsum.photos/800/1000" />
+            <MainCard image="https://picsum.photos/800/900" />
+            <MainCard image="https://picsum.photos/800" />
+            <MainCard image="https://picsum.photos/800/1000" />
           </div>
 
           <div className="maincards">
-            <MainCardDR image="https://picsum.photos/800/900" />
-            <MainCardDR image="https://picsum.photos/800" />
-            <MainCardDR image="https://picsum.photos/800/1000" />
+            <MainCard image="https://picsum.photos/800/900" />
+            <MainCard image="https://picsum.photos/800" />
+            <MainCard image="https://picsum.photos/800/1000" />
           </div>
         </div>
       </div>

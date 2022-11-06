@@ -11,7 +11,7 @@ import MainCards from "./Main/MainCards";
 import MyCards from "./MyPages/MyCards";
 import IterMap from "./IterMap/IterMap";
 import Notifications from "./Notifications/Alram";
-import Test from "./Test"
+
 
 
 
@@ -31,7 +31,7 @@ function App() {
         <Route path="/MyPages" element={<MyCards/>} />
         <Route path="/PostCards" element={<PostCards/>} />
         <Route path="/Notifications" element={<Notifications/>} />
-        <Route path="/Test" element={<Test/>} />
+        
         <Route path="/Login" element={<Login/>} />
 
       </Routes>
