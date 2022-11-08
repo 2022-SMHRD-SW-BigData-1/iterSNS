@@ -1,6 +1,6 @@
 import "./pinfo.scss";
 import React from "react";
-import avatar from "./images/lorde.png";
+import avatar from "./images/profile.png";
 import Button2 from "./Buttonfing";
 import Button1 from "./Buttonfer";
 import Button3 from "./Buttonpost";
