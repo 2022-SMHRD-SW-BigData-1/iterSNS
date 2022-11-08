@@ -87,6 +87,8 @@ router.post("/Userpost", upload.single("jeju"), function (request, response) {
   const seq = Number(seqwe);
   const img = request.file.buffer;
 
+  console.log(post, location, id, seq, img);
+
   let sql =
     "insert into t_post(user_seq, user_id, post_location, post_content, post_img) values (?, ?, ?, ?, ?)";
 
@@ -107,6 +109,9 @@ router.post("/Comment", function (request, response) {
 });
 
 router.post("/getUser", function (request, response){
+  
+  const id = idqwe;
+  const pw = seqwe;
 
   let sql = "select * from t_post order by post_date desc";
   conn.query(sql, function (err, rows) {
