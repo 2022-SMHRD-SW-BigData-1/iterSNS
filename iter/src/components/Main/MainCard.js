@@ -9,6 +9,8 @@ import Button from "@mui/material/Button";
 import Pclick_content from "./Post_click/Pclick_content";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Typography from "@mui/material/Typography";
+import CardContent from '@mui/material/CardContent';
 
 const style = {
   position: "absolute",
@@ -79,14 +81,27 @@ function MainCard(props) {
           open={open}
           onClose={handleClose}
           closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
+          // BackdropComponent={Backdrop}
+          // BackdropProps={{
+          //   timeout: 500,
+          // }}
         >
           <Fade in={open}>
             <Box sx={style}>
-              <Pclick_content />
+              <Pclick_content
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                timeout: 500,
+                }}
+              />
+              <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography component="div" variant="h5">
+            Live From Space
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="div">
+            Mac Miller
+          </Typography>
+        </CardContent>
             </Box>
           </Fade>
         </Modal>
