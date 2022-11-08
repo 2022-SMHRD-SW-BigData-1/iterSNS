@@ -1,22 +1,22 @@
-.mycm{
+.mycm {
   width: 100vw;
-  margin:auto;
+  margin: auto;
+  margin-top: 10vh;
 
-  .mycontainer{
+  .mycontainer {
     display: flex;
     align-content: center;
     justify-content: space-between;
     max-width: 62.5em;
     width: 100vw;
     margin: auto;
-        
+
     .mycards {
       width: 100vw;
       text-align: center;
       justify-content: space-between;
-      float:left;
+      float: left;
       margin: auto;
     }
-
-}
+  }
 }

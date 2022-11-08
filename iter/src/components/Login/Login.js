@@ -27,15 +27,20 @@ export default function Login() {
   const idRef = useRef();
   const pwRef = useRef();
   const nav = useNavigate();
+  
+  async function Logoutaxios(){
+    await axios.post("http://127.0.0.1:3001/Logout")
+    .then((res) => {
+      console.log("초기화 성공!", res);
+    })
+    .catch(() => {
+      console.log("초기화 실패!");
+    }); 
+  }
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:3001/Logout")
-      .then((res) => {
-        console.log("초기화 성공!", res.data.res);
-      })
-      .catch(() => {
-        console.log("초기화 실패!");
-      }); 
+    console.log("Test")
+    Logoutaxios();
   }, []);
 
 

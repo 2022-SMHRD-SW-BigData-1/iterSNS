@@ -7,8 +7,6 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Pclick_content from "./Post_click/Pclick_content";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import Typography from "@mui/material/Typography";
 import CardContent from '@mui/material/CardContent';
 
@@ -22,42 +20,10 @@ const style = {
 };
 
 function MainCard(props) {
+  const { userID, image } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [imageData, setImageData] = useState("");
-  const [userID, setUserID] = useState();
-  let dataNum, num;
-
-  async function getUserInfo() {
-    console.log("DB에서 ID값 가져오기!");
-    
-    // axios.post("보낼 위치", "보낼 데이터")
-    axios.post("http://127.0.0.1:3001/getUser")
-      .then((result) => {
-        console.log("데이터 보내기 성공!");
-        dataNum = result.data.userInfo;
-        num = parseInt(Math.random()*dataNum.length);
-  
-        setUserID(dataNum[num].user_id);
-        window.Buffer = window.Buffer || require("buffer").Buffer;
-        let encode = window.Buffer.from(dataNum[num].post_img).toString(
-          "base64"
-        );
-        setImageData("data:image/png;base64," + encode);
-        console.log("data:image/png;base64," + encode);
-        // nav("/MainView");
-      }) // axios로 보낼 위치에 데이터 보내기를 성공하면 then
-      .catch(() => {
-        console.log("데이터 보내기 실패!");
-      }); // aixos로 보낼 위치에 데이터 보내기를 실패하면 catch
-  }
-  
-  
-  useEffect(function () {
-    getUserInfo();
-  });
-  
 
   return (
     <>
@@ -70,7 +36,7 @@ function MainCard(props) {
               userID={userID}
             />
           </header>
-          <img className="maincardImage" src={imageData} alt="card content" />
+          <img className="maincardImage" src={image} alt="card content" />
         </div>
       </Button>
 
@@ -81,10 +47,6 @@ function MainCard(props) {
           open={open}
           onClose={handleClose}
           closeAfterTransition
-          // BackdropComponent={Backdrop}
-          // BackdropProps={{
-          //   timeout: 500,
-          // }}
         >
           <Fade in={open}>
             <Box sx={style}>
