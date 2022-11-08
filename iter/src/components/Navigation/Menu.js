@@ -14,9 +14,9 @@ function Menu() {
       
         <Link to="/MainView"><HomeIcon className="icon" fontSize="small"/></Link>
       
-        <Link to="#"><Inbox className="icon" /></Link>
+        {/* <Link to="#"><Inbox className="icon" /></Link> */}
       
-        <Link to="/PostCards"><BsPlusSquare className="icon" fontSize="small"/></Link>
+        <Link to="/PostCards"><BsPlusSquare className="icon" fontSize="medium"/></Link>
       
         <Link to="/Notifications"><FavoriteBorderIcon className="icon" fontSize="small"/></Link>
 

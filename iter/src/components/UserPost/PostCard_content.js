@@ -1,10 +1,10 @@
 import "./postcard_content.scss";
-import Profile from "../Profile/Profile";
+import MyProfile from "../Profile/MyProfile";
 import { BsPlusCircle } from "react-icons/bs";
 import { BsImage } from "react-icons/bs";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../images/로고1.png";
+// import logo from "../../images/로고1.png";
 import axios from "axios";
 
 function PostCard_content(props) {
@@ -26,12 +26,16 @@ function PostCard_content(props) {
         <div className="postcard2">
           
           <div className="card">
-          <img className="cardImage" src={logo} alt="card content" />
+          <img className="cardImage"  alt="card content" />
           </div>
           <div className="contentzz">
           <div className="post_header">
             <header>
+<<<<<<< HEAD
               <Profile iconSize="medium" />
+=======
+              <MyProfile iconSize="medium" storyBorder={storyBorder} />
+>>>>>>> b4bb3963eb7f401486a7d81a534d17647b2671b3
               
               <BsImage className="BsImage" onClick={imgUpload}></BsImage>
               <input type="file" accept="image/*" ref={imgInput} name="jeju" style={{display:"none"}}></input>
