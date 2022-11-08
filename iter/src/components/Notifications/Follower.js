@@ -23,17 +23,13 @@ export default function NestedList() {
   return (
     <>
  
-    <List className='MainList'
+    <List id='MainList'
       component="nav"
       aria-labelledby="nested-list-subheader">
-      <ListItemButton onClick={handleClick} id='headerClick'>
-        <ListItemText primary="팔로워" id='header'/>
-        {/* 맨상단 제목부분 */}
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
+    
      
     {/* 팔로워 팔로잉 스위치 버튼 */}
-    <Collapse in={open} timeout="auto" unmountOnExit>
+    {/* <Collapse in={open} timeout="auto" unmountOnExit>
       <List component="div" disablePadding>
           <Divider variant="inset" component="li" />
             <ListItem alignItems="center" id='followerbutton'>
@@ -43,7 +39,7 @@ export default function NestedList() {
               </ButtonGroup>
             </ListItem>
       </List>
-    </Collapse>
+    </Collapse> */}
 
 
 
@@ -59,7 +55,7 @@ export default function NestedList() {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary="동대문엽기떡볶이"/>
-            <Button variant="contained" color="info">삭제</Button>
+            <Button variant="contained" color="warning">삭제</Button>
             </ListItem>
         </List>
       </Collapse>
@@ -74,7 +70,7 @@ export default function NestedList() {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary="BHC"/>
-            <Button variant="contained" color="info">삭제</Button>
+            <Button variant="contained" color="warning">삭제</Button>
             </ListItem>
         </List>
       </Collapse>
@@ -89,7 +85,7 @@ export default function NestedList() {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary="허니콤보"/>
-            <Button variant="contained" color="info">삭제</Button>
+            <Button variant="contained" color="warning">삭제</Button>
             </ListItem>
         </List>
       </Collapse>
@@ -104,7 +100,7 @@ export default function NestedList() {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary="BHC"/>
-            <Button variant="contained" color="info">삭제</Button>
+            <Button variant="contained" color="warning">삭제</Button>
             </ListItem>
         </List>
       </Collapse>
@@ -119,7 +115,7 @@ export default function NestedList() {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary="교촌레드"/>
-            <Button variant="contained" color="info">삭제</Button>
+            <Button variant="contained" color="warning">삭제</Button>
             </ListItem>
         </List>
       </Collapse>
@@ -134,7 +130,7 @@ export default function NestedList() {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary="탕화쿵푸마라탕"/>
-            <Button variant="contained" color="info">삭제</Button>
+            <Button variant="contained" color="warning">삭제</Button>
             </ListItem>
         </List>
       </Collapse>

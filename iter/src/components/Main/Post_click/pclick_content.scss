@@ -62,7 +62,7 @@
   }
   .clickText {
     width: 350px;
-    height: 180px;
+    height: 150px;
     display: block;
     border: 20px black;
     
@@ -90,6 +90,7 @@
     background-color: $background-white;
     margin-bottom: 3.5em;
     border-radius: 3px;
+    height: 170px;
 
     .cardMenu {
       display: flex;
@@ -137,6 +138,8 @@
       justify-content: space-between;
       font-size: 0.85em;
       padding: 1.5em 1.25em;
+      margin-top: 3.5em;
+      margin-bottom: 1em;
 
       .clickcommentText {
         color: $font-color-secondary;

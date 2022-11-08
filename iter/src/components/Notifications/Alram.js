@@ -12,7 +12,7 @@ import Avatar from '@mui/material/Avatar';
 import ListItem from '@mui/material/ListItem';
 import Button from '@mui/material/Button';
 import "./alram.scss";
-
+import { Link } from "react-router-dom"
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -38,7 +38,9 @@ export default function NestedList() {
       <List component="div" disablePadding>
           <Divider variant="inset" component="li" />
             <ListItem alignItems="center" id='Afollowerbutton'>
-              <Button variant="contained" size='large'>메인</Button>
+              <Link to="/MainView">
+                <Button variant="contained" size='large'>메인</Button>
+              </Link>
             </ListItem>
       </List>
     </Collapse>

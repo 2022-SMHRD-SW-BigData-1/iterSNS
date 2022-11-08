@@ -50,6 +50,10 @@ function Pclick_content(props) {
       });
   };
 
+  const [style, setStyle] = useState({display: 'block'})
+
+
+
   return (
     <>
     <div className="clickcm">
@@ -63,7 +67,7 @@ function Pclick_content(props) {
           <div className="Pclick_contentcard">
             <header className="Pclick_contentheader">
               <Profile iconSize="medium" storyBorder={storyBorder} />
-              <button className="followbutton">follow</button>
+              <button className="followbutton" style={style} onClick={e=>{setStyle({display: 'none'})}}>follow</button>
             </header>
 
             <div className="Pclick_contentcontent">
