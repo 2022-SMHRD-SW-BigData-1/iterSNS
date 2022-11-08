@@ -3,13 +3,13 @@ import "./profileIcon.scss";
 function ProfileIcon(props) {
   const { iconSize, storyBorder, image } = props;
 
-  // function getRandomInt(min, max) {
-  //   min = Math.ceil(min);
-  //   max = Math.floor(max);
-  //   return Math.floor(Math.random() * (max - min + 1)) + min;
-  // }
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-  let randomId = 70;
+  let randomId = getRandomInt(1, 70);
 
   let profileImage = image
     ? image

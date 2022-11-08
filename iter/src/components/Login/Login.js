@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import * as React from "react";
 import axios from "axios";
 import Button from "@mui/material/Button";
@@ -23,9 +23,22 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+
   const idRef = useRef();
   const pwRef = useRef();
   const nav = useNavigate();
+
+  // useEffect(() => {
+  //   axios.get("http://127.0.0.1:3001/Logout")
+  //     .then((res) => {
+  //       console.log("초기화 성공!", res.data.res);
+  //     })
+  //     .catch(() => {
+  //       console.log("초기화 실패!");
+  //     }); 
+  // }, []);
+
+
   const handleLogin = (e) => {
     // form태그가 다른 페이지로 이동시키지 않도록 방지
     e.preventDefault();
@@ -41,7 +54,6 @@ export default function Login() {
       })
       .then((result) => {
         console.log("데이터 보내기 성공!", result.data.id);
-        localStorage.setItem("id", idRef.current.value);
         nav("/MainView");
       }) // axios로 보낼 위치에 데이터 보내기를 성공하면 then
       .catch(() => {

@@ -9,21 +9,21 @@ function MainCards() {
       <div className="maincm">
         <div className="maincontainer">
           <div className="maincards">
-            <MainCard image="https://picsum.photos/800/900" />
-            <MainCard image="https://picsum.photos/800" />
-            <MainCard image="https://picsum.photos/800/1000" />
+            <MainCard />
+            <MainCard />
+            <MainCard />
           </div>
 
           <div className="maincards">
-            <MainCard image="https://picsum.photos/800/900" />
-            <MainCard image="https://picsum.photos/800" />
-            <MainCard image="https://picsum.photos/800/1000" />
+            <MainCard />
+            <MainCard />
+            <MainCard />
           </div>
 
           <div className="maincards">
-            <MainCard image="https://picsum.photos/800/900" />
-            <MainCard image="https://picsum.photos/800" />
-            <MainCard image="https://picsum.photos/800/1000" />
+            <MainCard />
+            <MainCard />
+            <MainCard />
           </div>
         </div>
       </div>

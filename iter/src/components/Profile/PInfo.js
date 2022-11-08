@@ -9,10 +9,7 @@ import { BsBookmarks } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const PInfo = () => {
-  function Card(props) {
-    const { storyBorder, image, comments, likedByText, likedByNumber, hours } =
-      props;
-  }
+  
   return (
     <div className="info">
       <div className="container">

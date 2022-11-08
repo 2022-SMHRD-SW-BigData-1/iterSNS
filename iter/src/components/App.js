@@ -31,8 +31,6 @@ function App() {
         <Route path="/MyPages" element={<MyCards/>} />
         <Route path="/PostCards" element={<PostCards/>} />
         <Route path="/Notifications" element={<Notifications/>} />
-        
-        <Route path="/Login" element={<Login/>} />
 
       </Routes>
     </Router>

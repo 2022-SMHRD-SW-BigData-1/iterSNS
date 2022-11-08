@@ -75,7 +75,7 @@ export default function Login() {
       })
       .then((result)=>{
           console.log("데이터 보내기 성공!", result.data.result)
-          nav("/MainView");
+          nav("/");
       
       }) // axios로 보낼 위치에 데이터 보내기를 성공하면 then
       .catch(()=>{

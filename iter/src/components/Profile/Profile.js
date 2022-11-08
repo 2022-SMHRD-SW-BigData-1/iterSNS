@@ -1,36 +1,26 @@
 import "./profile.scss";
 import ProfileIcon from "./ProfileIcon";
-import users from "../../data/users";
+import { useState, useEffect, useInsertionEffect } from "react";
+import axios from "axios";
 
 function Profile(props) {
   const {
-    username,
-    caption,
     urlText,
     iconSize,
-    captionSize,
-    storyBorder,
-    hideAccountName,
     image,
+    userID
   } = props;
-
-  let accountName = username
-    ? username
-    : users[Math.floor(Math.random() * users.length)].username;
 
   return (
     <div className="profile">
-      <ProfileIcon
+      {/* <ProfileIcon
         iconSize={iconSize}
-        storyBorder={storyBorder}
         image={image}
-      />
-      {(accountName || caption) && !hideAccountName && (
+      /> */}
         <div className="textContainer">
-          <span className="accountName">{accountName}</span>
-          <span className={`caption ${captionSize}`}>{caption}</span>
+          <span className="accountName">{userID}</span>
         </div>
-      )}
+
       <a href="/">{urlText}</a>
     </div>
   );
