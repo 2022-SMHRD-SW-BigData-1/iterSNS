@@ -4,17 +4,21 @@
   margin-top: 8em;
 
   .postcontainer {
-    display: flex;
+    display: inline-block;
+    position: relative;
     align-content: center;
-    justify-content: space-between;
-    max-width: 62.5em;
-    width: 100vw;
-    margin: auto;
+    //justify-content: space-between;
+    width: 582;
+    height: 575;
+    margin: 0 0 0 20%;
+  
+  
+
 
     .postcards {
       width: 357px;
-      text-align: center;
-      float: left;
+        text-align: center;
+      //float: left;
       margin-top: 1.5em;
       margin-left: 1em;
       margin-right: 1em;
