@@ -79,7 +79,7 @@ function Pclick_content(props) {
                         <div className="interactions">
                         <Hearticon className="icon" like={like} onClick={toggleLike} />
                           <Comments className="icon" />
-                          <Inbox className="icon" />
+                          
                         </div>
                         <Bookmarkicon className="icon" save={save} onClick={toggleSave} />
                       </div>
