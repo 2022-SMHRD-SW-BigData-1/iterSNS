@@ -120,15 +120,16 @@ router.post("/getUser", function (request, response){
 
 //좋아요
 router.post("/Postlikes", function (request, response) {
+  const postSeq = request.body.postSeq;
   const likeState = request.body.postlike;
-  let sql;
-  if (likeState == false) {
-    sql = "update t_post set post_likes = post_likes+1";
-  } else {
-    sql = "update t_post set post_likes = post_likes-1";
-  }
 
-  conn.query(sql, function (err, rows) {
+  let sql;
+  if (likeState == true) {
+    sql = "update t_post set post_likes = post_likes+1 , post_likestate = ? where post_seq = ?";
+  } else {
+    sql = "update t_post set post_likes = post_likes-1 , post_likestate = ?  where post_seq = ?";
+  }
+  conn.query(sql, [likeState, postSeq], function (err, rows) {
     if (!err) {
       console.log("좋아요 완료!");
     } else {
@@ -162,6 +163,37 @@ router.post("/Save", function (request, response) {
       console.log("저장 실패!" + err);
     }
   });
+});
+
+router.post("/Poinuser", function (request, response){
+  const postSeq = request.body.postSeq;
+
+  let sql = "select * from t_post where post_seq = ?";
+  conn.query(sql, function (err, rows) {
+    if (rows.length > 0) {
+      response.json({ result: "success", userInfo: rows });
+    } else {
+      console.log("로그인 실패");
+    }
+  });
+
+});
+
+router.post("/Follow", function (request, response){
+  const postUserId = request.body.postUserId;
+
+  let sql = `insert into t_follow(user_seq, user_id, follow_id) values(${seqwe}, '${idqwe}', ?)`;
+
+  conn.query(sql, [postUserId], function (err, rows) {
+    if (!err) {
+      console.log("팔로우 완료!")
+    } else {
+      console.log(seqwe);
+      console.log(idqwe);
+      console.log("팔로우 실패..." + err);
+    }
+  });
+
 });
 
 module.exports = router;

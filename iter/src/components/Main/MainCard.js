@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Pclick_content from "./Post_click/Pclick_content";
 import Typography from "@mui/material/Typography";
 import CardContent from '@mui/material/CardContent';
+import { useState, useEffect } from "react";
 
 const style = {
   position: "absolute",
@@ -20,10 +21,16 @@ const style = {
 };
 
 function MainCard(props) {
-  const { userID, image } = props;
+  const { postSeq, postUserseq, postUserId, postUserDate, postUserLocation, postUsercontent, postUserLikes, postUserLikeState, postUserImg} = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  
+  // window.Buffer = window.Buffer || require("buffer").Buffer;
+  // encode = window.Buffer.from(data.post_img).toString("base64");
+  // postImg.push("data:image/png;base64," + encode);
+  // setpostUserImg(postUserImg.concat(postImg));
 
   return (
     <>
@@ -33,10 +40,10 @@ function MainCard(props) {
             <Profile
               className="mainProfile"
               iconSize="medium"
-              userID={userID}
+              userID={postUserId}
             />
           </header>
-          <img className="maincardImage" src={image} alt="card content" />
+          <img className="maincardImage" src={postUserImg} alt="card content" />
         </div>
       </Button>
 
@@ -51,6 +58,16 @@ function MainCard(props) {
           <Fade in={open}>
             <Box sx={style}>
               <Pclick_content
+                postSeq = {postSeq}
+                postUserseq = {postUserseq}
+                postUserId = {postUserId}
+                postUserDate = {postUserDate}
+                postUserLocation = {postUserLocation}
+                postUsercontent = {postUsercontent}
+                postUserLikes = {postUserLikes}
+                postUserImg = {postUserImg}
+                postUserLikeState = {postUserLikeState}
+
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                 timeout: 500,
