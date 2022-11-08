@@ -8,8 +8,25 @@ import { BsGear } from "react-icons/bs";
 import { BsBookmarks } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const PInfo = () => {
-  
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Typography from "@mui/material/Typography";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 1250,
+  boxShadow: 24,
+};
+const PInfo = (props) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="info">
       <div className="container">
@@ -21,9 +38,11 @@ const PInfo = () => {
             <span className="z1">
               <Button3></Button3>
             </span>
-            <span className="z2">
-              <Button1></Button1>
-            </span>
+            <div>
+              <span className="z2">
+                <Button1></Button1>
+              </span>
+            </div>
             <span className="z3">
               <Button2></Button2>
             </span>

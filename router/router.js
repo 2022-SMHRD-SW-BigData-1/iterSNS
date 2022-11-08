@@ -80,7 +80,7 @@ router.get("/Logout", function (request, response) {
   msgarr = [];
   idqwe = "";
   seqwe = "";
-  response.json({res: "success"});
+  response.json({ res: "success" });
 });
 
 router.post("/Userpost", upload.single("jeju"), function (request, response) {
@@ -104,13 +104,10 @@ router.post("/Userpost", upload.single("jeju"), function (request, response) {
 });
 
 router.post("/Comment", function (request, response) {
-
   const comment = request.body.post;
-
 });
 
-router.post("/getUser", function (request, response){
-
+router.post("/getUser", function (request, response) {
   let sql = "select * from t_post order by post_date desc";
   conn.query(sql, function (err, rows) {
     if (rows.length > 0) {
@@ -125,12 +122,12 @@ router.post("/getUser", function (request, response){
 router.post("/Postlikes", function (request, response) {
   const likeState = request.body.postlike;
   let sql;
-  if( likeState == false ){
+  if (likeState == false) {
     sql = "update t_post set post_likes = post_likes+1";
-  } else{
+  } else {
     sql = "update t_post set post_likes = post_likes-1";
-  }  
-  
+  }
+
   conn.query(sql, function (err, rows) {
     if (!err) {
       console.log("좋아요 완료!");
@@ -146,19 +143,19 @@ router.post("/Save", function (request, response) {
   const seq = Number(seqwe);
   let p_seq;
 
-    let sql = "select * from t_post where user_id = ?";
+  let sql = "select * from t_post where user_id=?";
 
-    conn.query(sql, [id], function (err, rows) {
-      if (rows.length > 0) {
-        console.log("불러오기 성공!");
-        const p_seq = rows[0];
-      } else {
-        console.log("저장 실패!" + err);
-      }
-    });
+  conn.query(sql, [id, p_seq], function (err, rows) {
+    if (rows.length > 0) {
+      console.log("불러오기 성공!");
+      const p_seq = rows[0];
+    } else {
+      console.log("불러오기 실패!" + err);
+    }
+  });
 
   sql = "insert into t_bookmark(user_seq, user_id, post_seq) values(?, ?, ?)";
-  conn.query(sql, [seq, id], function (err, rows) {
+  conn.query(sql, [seq, id, p_seq], function (err, rows) {
     if (!err) {
       console.log("저장 완료!");
     } else {
@@ -166,7 +163,5 @@ router.post("/Save", function (request, response) {
     }
   });
 });
-
-
 
 module.exports = router;
