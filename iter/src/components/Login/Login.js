@@ -28,15 +28,15 @@ export default function Login() {
   const pwRef = useRef();
   const nav = useNavigate();
 
-  // useEffect(() => {
-  //   axios.get("http://127.0.0.1:3001/Logout")
-  //     .then((res) => {
-  //       console.log("초기화 성공!", res.data.res);
-  //     })
-  //     .catch(() => {
-  //       console.log("초기화 실패!");
-  //     }); 
-  // }, []);
+  useEffect(() => {
+    axios.get("http://127.0.0.1:3001/Logout")
+      .then((res) => {
+        console.log("초기화 성공!", res.data.res);
+      })
+      .catch(() => {
+        console.log("초기화 실패!");
+      }); 
+  }, []);
 
 
   const handleLogin = (e) => {
