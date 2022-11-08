@@ -31,7 +31,7 @@ function PostCard_content(props) {
           <div className="contentzz">
           <div className="post_header">
             <header>
-              <Profile iconSize="medium" storyBorder={storyBorder} />
+              <Profile iconSize="medium" />
               
               <BsImage className="BsImage" onClick={imgUpload}></BsImage>
               <input type="file" accept="image/*" ref={imgInput} name="jeju" style={{display:"none"}}></input>

@@ -19,11 +19,6 @@ let idqwe;
 let seqwe;
 let userCnt;
 
-router.get("*", (request, respond) => {
-  console.log("접속을 환영합니다 FnD 팀!!!");
-  respond.sendFile(path.join(__dirname, "..", "iter", "build", "index.html"));
-});
-
 router.post("/SignIn", function (request, response) {
   const userID = request.body.email;
   const userPW = request.body.password;
@@ -54,6 +49,7 @@ router.post("/SignIn", function (request, response) {
 });
 
 router.post("/Login", function (request, response) {
+  console.log("test")
   const userID = request.body.email;
   const userPW = request.body.password;
 
@@ -74,9 +70,10 @@ router.post("/Login", function (request, response) {
   });
 });
 
-router.get("/Logout", function (request, response) {
+router.post("/Logout", function (request, response) {
   console.log("로그아웃 성공!");
-  //delete request.session.user;
+ 
+  delete request.session.user;
   msgarr = [];
   idqwe = "";
   seqwe = "";
@@ -167,6 +164,10 @@ router.post("/Save", function (request, response) {
   });
 });
 
+router.get("*", (request, respond) => {
+  console.log("접속을 환영합니다 FnD 팀!!!");
+  respond.sendFile(path.join(__dirname, "..", "iter", "build", "index.html"));
+});
 
 
 module.exports = router;
