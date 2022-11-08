@@ -3,19 +3,19 @@
   // top: 15vh;
   max-width: 15em;
   width: 100vw;
-  margin:auto;
-  margin-top: 15vh;
-  
-  
+  margin: auto;
+  margin-top: 5vh;
+
   .mycardImage {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    max-width: 18em;
+    max-width: 21.9em;
     margin: auto;
-    width: 100vw;
+    width: 290px;
     max-height: 575px;
-    height:100vh;
+    height: 350px;
     display: block;
+    border-radius: 10px;
   }
 }

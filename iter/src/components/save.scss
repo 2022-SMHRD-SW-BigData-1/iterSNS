@@ -1,23 +1,31 @@
-.maincm {
+.book {
+  position: relative;
+  left: 50%;
+  top: 10vh;
+  color: black;
+  //   margin: auto;
+}
+
+.savecm {
   width: 100vw;
   margin: auto;
-  margin-top: 12vh;
-  margin-bottom: 12vh;
 
-  .maincontainer {
+  .savecontainer {
     display: flex;
     align-content: center;
     justify-content: space-between;
     max-width: 62.5em;
     width: 100vw;
     margin: auto;
+    // margin-top: 10vh;
 
-    .maincards {
-      width: 290px;
+    .savecards {
+      width: 100vw;
       text-align: center;
       justify-content: space-between;
       float: left;
       margin: auto;
+      margin-top: 8vh;
     }
   }
 }
