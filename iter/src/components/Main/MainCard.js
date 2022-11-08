@@ -17,7 +17,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 1250,
+  width: 1000,
   boxShadow: 24
 };
 
@@ -96,10 +96,10 @@ function MainCard(props) {
               />
               <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5">
-            Live From Space
+            {/* Live From Space */}
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" component="div">
-            Mac Miller
+            {/* Mac Miller */}
           </Typography>
         </CardContent>
             </Box>
