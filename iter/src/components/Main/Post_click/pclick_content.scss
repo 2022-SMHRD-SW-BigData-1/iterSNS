@@ -71,9 +71,9 @@
       
     }
   }
-  .clickText {
-    width: 350px;
-    height: 150px;
+  #clickText {
+    width: 348px;
+    height: 100px;
     display: block;
     border: solid 0.1px;
     border-color: #dbdbdb;
@@ -86,12 +86,12 @@
     height: 280px;
     
   }
-  .clickLocation {
-    width: 350px;
-    height: 326px;
+  #clickLocation {
+    max-width: 12em;
+    max-height: 6em;
     display: block;
     
-    margin-top: 2.76em;
+    
     border: solid 0.1px;
     border-color: #dbdbdb;
   }
@@ -108,7 +108,7 @@
     border-radius: 3px;
     height: 170px;
 
-    .cardMenu {
+    #cardMenu {
       display: flex;
       justify-content: space-between;
       margin: 1em 0;
@@ -186,3 +186,6 @@
     }
   }
 
+.posttime{
+  margin-right: 1em;
+}

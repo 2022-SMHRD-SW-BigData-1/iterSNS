@@ -2,6 +2,10 @@ import "./postcard_content.scss";
 import { BsPlusCircle } from "react-icons/bs";
 import { BsImage } from "react-icons/bs";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import logo from "../../images/로고1.png";
+import axios from "axios";
+
 
 function PostCard_content(props) {
   const { storyBorder, image } = props;
