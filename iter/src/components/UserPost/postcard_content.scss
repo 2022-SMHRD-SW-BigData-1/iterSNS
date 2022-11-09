@@ -5,10 +5,6 @@
   border: 1px solid $border-color-grey;
   background-color: $background-white;
 
-
-  
-
-
   margin-bottom: 3.5em;
   border-radius: 3px;
   // max-height: 1200px;
@@ -24,8 +20,8 @@
     float: right;
     margin-left: 0;
     margin-top: auto;
-    
-    
+    background-color: white;
+    height: 20px;
 
     .profile {
       margin-bottom: 0;
@@ -62,79 +58,76 @@
     }
   }
 }
-.post_header{
+.post_header {
   display: inline-block;
-  position:relative;
-  margin:0;
-  
+  position: relative;
+  margin: 0;
 }
 
-  .contentzz{
-    margin-top: 556px;
-    display: inline-block;
-    position: relative;
-    left : 82.5%;
-    bottom : 100.9%
-  }
+.contentzz {
+  margin-top: 556px;
+  display: inline-block;
+  position: relative;
+  left: 100%;
+  bottom: 110.9%;
+}
 
-  .cardText {
-    width: 350px;
-    height: 450px;
-    display: block;
-  }
-  .cardLocation {
-    width: 350px;
-    height: 60px;
-    display: block;
-  }
+.cardText {
+  width: 350px;
+  height: 450px;
+  display: block;
+}
+.cardLocation {
+  width: 350px;
+  height: 60px;
+  display: block;
+}
 
-  .cardImage {
-    width: 580px;
-    height: 573px;
-    // display: block;
-  }
+.cardImage {
+  width: 580px;
+  height: 573px;
+  // display: block;
+}
 
+// }
 
-  // }
+// .likedBy {
+//   display: flex;
+//   padding-left: 1em;
 
-  // .likedBy {
-  //   display: flex;
-  //   padding-left: 1em;
+//   span {
+//     font-size: 0.75em;
+//     margin-left: 0.5em;
+//     padding-top: 0.5em;
+//   }
+// }
 
-  //   span {
-  //     font-size: 0.75em;
-  //     margin-left: 0.5em;
-  //     padding-top: 0.5em;
-  //   }
-  // }
+// .comments {
+//   margin-bottom: 0.75em;
+// }
 
-  // .comments {
-  //   margin-bottom: 0.75em;
-  // }
+// .timePosted {
+//   font-size: 0.6em;
+//   padding-left: 2em;
+//   padding-bottom: 1em;
+//   color: $font-color-secondary;
+//   border-bottom: 1px solid $border-color-grey-secondary;
+// }
 
-  // .timePosted {
-  //   font-size: 0.6em;
-  //   padding-left: 2em;
-  //   padding-bottom: 1em;
-  //   color: $font-color-secondary;
-  //   border-bottom: 1px solid $border-color-grey-secondary;
-  // }
+// .addComment {
+//   display: flex;
+//   justify-content: space-between;
+//   font-size: 0.85em;
+//   padding: 1.5em 1.25em;
 
-  // .addComment {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   font-size: 0.85em;
-  //   padding: 1.5em 1.25em;
+//   .commentText {
+//     color: $font-color-secondary;
+//   }
 
-  //   .commentText {
-  //     color: $font-color-secondary;
-  //   }
-
-  //   .postText {
-  //     color: $link-color-secondary;
-  //   }
-  // }
-
+//   .postText {
+//     color: $link-color-secondary;
+//   }
+// }
 
 // @media only screen and (max-width: 640px) {
 //   .card {
