@@ -89,7 +89,7 @@ function MainCards() {
   return (
     <>
       <Navigation></Navigation>
-      <div style={{height:'150px'}}></div>
+      <div style={{height:'40px'}}></div>
       <div className="maincm">
         <div className="maincontainer">
           <div className="maincards">

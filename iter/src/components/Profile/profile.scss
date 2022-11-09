@@ -8,6 +8,7 @@
   justify-content: space-between;
   max-height: 2em;
   height: 100vh;
+  margin-left:7.4em;
 
   .textContainer {
     color: black;
@@ -20,6 +21,9 @@
     .accountName {
       font-weight: 500;
       margin-bottom: 5px;
+      
+     
+   
 
       &:hover {
         cursor: pointer;

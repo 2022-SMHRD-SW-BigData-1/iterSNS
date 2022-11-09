@@ -17,9 +17,9 @@ function Profile(props) {
         iconSize={iconSize}
         image={image}
       /> */}
-        <div className="textContainer">
+        {/* <div className="textContainer"> */}
           <span className="accountName">{userID}</span>
-        </div>
+        {/* </div> */}
 
       <a href="/">{urlText}</a>
     </div>

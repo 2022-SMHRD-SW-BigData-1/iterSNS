@@ -3,7 +3,7 @@
 .clickcm {
   width: 1000;
   margin: auto;
-  margin-top: 8em;
+  margin-top: 4em;
 
   .clickcontainer {
     display: flex;
@@ -11,14 +11,24 @@
     justify-content: space-between;
     // max-width: 800;
     // width: 100vw;
-    margin: auto;
-    margin-right: 2em;
+    // margin: 0 auto;
+    margin-left: 4em;
+    
+    background-color: lightyellow;
+    width: 868px;
+    height: 745px;
+    margin-top: 2em;
+    border-radius: 7px;
+    border: solid 2px;
+    
 
     .clickcards {
       width: 350px;
       text-align: center;
       float: left;
-      margin: auto;
+      margin-right: 2em;
+      margin-top: 1.3em;
+      // margin: auto;
     }
   }
 }
@@ -44,6 +54,7 @@
     align-items: center;
     padding: 0.75em;
     width: 350px;
+    
 
     
 
@@ -52,9 +63,9 @@
     }
 
     .followbutton {
-      color: darkgoldenrod;
-      background-color: antiquewhite;
-      border-color: antiquewhite;
+      color: black;
+      background-color: lightyellow;
+      border-color: lightyellow;
       margin-right: 18px;
       border-radius: 10px;
       
@@ -64,7 +75,8 @@
     width: 350px;
     height: 150px;
     display: block;
-    border: 20px black;
+    border: solid 0.1px;
+    border-color: #dbdbdb;
     
 
     
@@ -72,13 +84,16 @@
   .Pclick_cards {
     width: 350px;
     height: 280px;
+    
   }
   .clickLocation {
     width: 350px;
     height: 326px;
     display: block;
-    border-color: black;
+    
     margin-top: 2.76em;
+    border: solid 0.1px;
+    border-color: #dbdbdb;
   }
 }
 

@@ -69,16 +69,16 @@ function Pclick_content(props) {
   return (
     <>
     <div className="clickcm">
-      <div className="clickcontainer">
-        <div className="clickcards">
+      <div className="clickcontainer" >
+        <div className="clickcards" >
           <div className="Pclick_imgcard">
             <img className="Pclick_imgcardImage" src={postUserImg} alt="card content" />
           </div>
         </div>
-        <div className="clickcards">          
+        <div className="clickcards" >          
           <div className="Pclick_contentcard">
-            <header className="Pclick_contentheader">
-              <Profile iconSize="medium" userID={postUserId}/>
+            <header className="Pclick_contentheader" >
+              <Profile userID={postUserId}/>
               <button className="followbutton" style={style} onClick={toggleFollow}>follow</button>
             </header>
 
@@ -114,8 +114,7 @@ function Pclick_content(props) {
               <div type="text" className="clickLocation" alt="card content" />
             </div>
           </div>
-          
-        </div>
+        </div>  
       </div>
     </div>
       

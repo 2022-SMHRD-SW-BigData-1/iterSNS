@@ -35,7 +35,7 @@ function Menu() {
         </Link>
         {/* <Link to="#"><Inbox className="icon" /></Link> */}
 
-        <BsPlusSquare className="icon" fontSize="medium" />
+        {/* <BsPlusSquare className="icon" fontSize="medium" /> */}
         <UploadModal></UploadModal>
         <>
           <FavoriteBorderIcon
