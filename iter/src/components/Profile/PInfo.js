@@ -1,8 +1,9 @@
 import "./pinfo.scss";
 import React from "react";
+
 import avatar from "./images/profile.png";
-import Button2 from "./Buttonfing";
 import Button1 from "./Buttonfer";
+import Button2 from "./Buttonfing";
 import Button3 from "./Buttonpost";
 import { BsGear } from "react-icons/bs";
 import { BsBookmarks } from "react-icons/bs";
@@ -22,11 +23,11 @@ const style = {
   width: 1250,
   boxShadow: 24,
 };
-const PInfo = (props) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
+
+
+const PInfo = (props) => {  
+  const { followID, followingID } = props;
   return (
     <div className="info">
       <div className="container">
@@ -40,11 +41,11 @@ const PInfo = (props) => {
             </span>
             <div>
               <span className="z2">
-                <Button1></Button1>
+                <Button1 followID={followID}></Button1>
               </span>
             </div>
             <span className="z3">
-              <Button2></Button2>
+              <Button2 followingID={followingID}></Button2>
             </span>
           </div>
           <div className="profileChange">

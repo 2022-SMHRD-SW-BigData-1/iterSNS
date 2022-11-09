@@ -16,22 +16,25 @@ function PostCard_content(props) {
     imgInput.current.click();
   }
 
-  function goSubmit(){
+  function goSubmit() {
     postInput.current.click();
   }
 
   return (
     <>
-      <form action="http://localhost:3001/Userpost" method="post" encType="multipart/form-data">
+      <form
+        action="http://localhost:3001/Userpost"
+        method="post"
+        encType="multipart/form-data"
+      >
         <div className="postcard2">
-          
           <div className="card">
-          <img className="cardImage"  alt="card content" />
+            <img className="cardImage" alt="card content" />
           </div>
           <div className="contentzz">
           <div className="post_header">
             <header>
-              {/* <MyProfile iconSize="medium" storyBorder={storyBorder} /> */}
+              <MyProfile iconSize="medium" storyBorder={storyBorder} />
               
               <BsImage className="BsImage" onClick={imgUpload}></BsImage>
               <input type="file" accept="image/*" ref={imgInput} name="jeju" style={{display:"none"}}></input>
@@ -39,6 +42,7 @@ function PostCard_content(props) {
               <BsPlusCircle type="submit" className="BsPlusCircle" onClick={goSubmit}></BsPlusCircle>
               <button style={{display:"none"}} ref={postInput}></button>
             </header>
+          </div>
             <input
               type="text"
               className="cardText"

@@ -15,7 +15,8 @@ const style = {
   width: 800,
   boxShadow: 24,
 };
-export default function OutlinedButtons() {
+export default function OutlinedButtons(props) {
+  const { followID } = props
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -34,7 +35,7 @@ export default function OutlinedButtons() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            <Follower />
+            <Follower followID={followID}/>
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}></Typography>
         </Box>

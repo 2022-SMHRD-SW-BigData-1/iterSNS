@@ -196,4 +196,24 @@ router.post("/Follow", function (request, response){
 
 });
 
+router.post("/GetFollow", function (request, response){
+  const id = idqwe;
+  const seq = seqwe;
+
+  let sql = `select * from t_follow where user_id = ${id}`;
+
+  conn.query(sql, function (err, rows) {
+    if (rows.length>0) {
+      console.log("팔로우 데이터 불러오기!");
+      response.json({ result: "success", followInfo: rows });
+
+    } else {
+
+      console.log("팔로우 데이터 불러오기 실패!" + err);
+    }
+  });
+
+});
+
+
 module.exports = router;
