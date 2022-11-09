@@ -2,8 +2,8 @@ import "./pinfo.scss";
 import React from "react";
 
 import avatar from "./images/profile.png";
-import Button1 from "./Buttonfer";
-import Button2 from "./Buttonfing";
+import Button1 from "./Buttonfollow";
+import Button2 from "./Buttonfollower";
 import Button3 from "./Buttonpost";
 import { BsGear } from "react-icons/bs";
 import { BsBookmarks } from "react-icons/bs";
@@ -28,7 +28,7 @@ const style = {
 
 const PInfo = (props) => {  
 
-  const { followID, followingID } = props;
+  const { followID, followerID } = props;
   
   return (
     <div className="info">
@@ -46,9 +46,9 @@ const PInfo = (props) => {
                 <Button1 followID={followID}></Button1>
               </span>
             </div>
-            <span className="z3">
-              <Button2 followingID={followingID}></Button2>
-            </span>
+              <span className="z3">
+                <Button2 followerID={followerID}></Button2>
+              </span>
           </div>
           <div className="profileChange">
             <button className="save">

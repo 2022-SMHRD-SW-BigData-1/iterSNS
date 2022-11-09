@@ -2,11 +2,10 @@ import * as React from "react";
 import Button2 from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Follower from "../Notifications/Follower";
-import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -16,7 +15,7 @@ const style = {
   boxShadow: 24,
 };
 export default function OutlinedButtons(props) {
-  const { followingID } = props
+  const { followerID } = props
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -24,7 +23,7 @@ export default function OutlinedButtons(props) {
     <>
       <Stack direction="row" spacing={1}>
         <Button2 onClick={handleOpen} variant="outlined" color="warning">
-          팔로잉
+          팔로워
         </Button2>
       </Stack>
       <Modal
@@ -35,7 +34,10 @@ export default function OutlinedButtons(props) {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            <Follower />
+            {followerID.map(function (data, index) {
+              return (<Follower followerID={data}/>);
+            })}
+            
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}></Typography>
         </Box>

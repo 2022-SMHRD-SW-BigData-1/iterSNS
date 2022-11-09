@@ -199,15 +199,28 @@ router.post("/Follow", function (request, response){
 router.post("/GetFollow", function (request, response){
   const id = idqwe;
   const seq = seqwe;
+  let follow;
   console.log(id);
 
-  let sql = `select * from t_follow where user_id = (?)`;
+  let sql = "select distinct follow_id from t_follow where user_id = ?";
 
   conn.query(sql,[id], function (err, rows) {
     if (rows.length>0) {
-      
+      follow = rows;
       console.log("팔로우 데이터 불러오기!");
-      response.json({ result: "success", followInfo: rows });
+    } else {
+
+      console.log("팔로우 데이터 불러오기 실패!" + err);
+    }
+  });
+// 팔로우가 내가한 거
+  sql = "select distinct user_id from t_follow where follow_id = ?";
+
+  conn.query(sql,[id], function (err, rows) {
+    if (rows.length>0) {      
+
+      console.log("팔로워 데이터 불러오기!");
+      response.json({ result: "success", followInfo: follow, followerInfo: rows });
 
     } else {
 
@@ -216,6 +229,8 @@ router.post("/GetFollow", function (request, response){
   });
 
 });
+
+
 
 
 module.exports = router;
