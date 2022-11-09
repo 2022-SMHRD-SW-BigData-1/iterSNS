@@ -3,7 +3,8 @@ import MainCard from "./MainCard";
 import Navigation from "../Navigation/Navigation";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import logo from "../Navigation/images/logowhite2.png"
+import logo from "../Navigation/images/logowhite2.png";
+import IterMap from "../IterMap/IterMap";
 
 function MainCards() {
   let encode;
@@ -88,6 +89,7 @@ function MainCards() {
 
   return (
     <>
+    {/* <IterMap/> */}
       <Navigation></Navigation>
       <div style={{height:'40px'}}></div>
       <div className="maincm">

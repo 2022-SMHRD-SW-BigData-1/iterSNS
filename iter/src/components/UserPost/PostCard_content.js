@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import logo from "../../images/로고1.png";
 import axios from "axios";
-import photo from "../../images/photo.PNG";
+
 
 function PostCard_content(props) {
   const { storyBorder, image } = props;

@@ -1,5 +1,4 @@
 import React, {useEffect, useState, useRef } from "react";
-import Navigation from '../Navigation/Navigation';
 import "./itermap.scss"
 const { kakao } = window;
 
@@ -116,13 +115,12 @@ const Itermap = () => {
 
     return(
         <>
-        <Navigation />
         <div className="bu">
         <input type="text" id="input" onChange={changeLocation}></input>
         <button onClick={callUse}>검색</button>
         <button onClick={resetMap}>초기화</button>
         </div>
-        <div id="map" style={{width:"350px", height:"326px"}}></div>
+        <div id="map"></div>
         </>
     );
 };

@@ -4,6 +4,7 @@ import { ReactComponent as Comments } from "../../Main/images/comments.svg";
 import Bookmarkicon from "../../Bookmark";
 import Hearticon from "../../Hearticon";
 import { useState, useRef } from "react";
+import IterMap from "../../IterMap/IterMap"
 import axios from "axios";
 
 function Pclick_content(props) {
@@ -110,10 +111,11 @@ function Pclick_content(props) {
                       <div className="cardMenu">
                         <div className="interactions">
                         <Hearticon className="icon" like={like} onClick={toggleLike} />
-                          <Comments className="icon" /> {postUserDate.slice(0,10)} {postUserDate.slice(11,19)}
-                          
+                          <Comments className="icon" />
                         </div>
-                        <Bookmarkicon className="icon" save={save} onClick={toggleSave} />
+                        <div className="posttime">
+                        {postUserDate.slice(0,10)} {postUserDate.slice(11,19)}
+                        </div>
                       </div>
 
                       <div className="clickcomments">
@@ -131,7 +133,7 @@ function Pclick_content(props) {
                   </div>
                 </div>
               {/* ↓지도api들어갈 자리 */}
-              <div type="text" className="clickLocation" alt="card content" />
+              <div type="text" className="clickLocation" alt="card content"><IterMap /></div>
             </div>
           </div>
         </div>  
