@@ -105,7 +105,7 @@ function Pclick_content(props) {
                     
                       <div className="clickaddComment">
                         <input className="clickcommentText" placeholder="Add a comment..."></input>
-                        <button className="clickpostText">Post</button>
+                        <button className="clickpostText" style={{color:"black"}}>Post</button>
                       </div>
                     </div>
                   </div>

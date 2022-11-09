@@ -40,7 +40,6 @@ export default function NestedList(props) {
                     </ListItemAvatar>
                 <ListItemText className='listtext'
                 primary={followingID}/>
-            <Button variant="contained" color="warning">팔로잉</Button>
             </ListItem>
         </List>
       </Collapse>

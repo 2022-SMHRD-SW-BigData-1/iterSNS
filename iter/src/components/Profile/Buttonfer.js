@@ -12,7 +12,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 1000,
+  width: 800,
   boxShadow: 24,
 };
 export default function OutlinedButtons(props) {

@@ -13,7 +13,6 @@
   // width: 357px;
   width: 580px;
   height: 573px;
-  border: 3px solid black;
   header {
     display: flex;
     justify-content: space-between;
@@ -22,12 +21,9 @@
     width: 324px;
     float: right;
     margin-left: 0;
-    margin-top: 44px;
+    margin-top: auto;
     background-color: white;
-    height: 23px;
-    margin-right: 230px;
-    border-top-right-radius: 10px;
-    border: 3px solid black;
+    height: 20px;
 
     .profile {
       margin-bottom: 0;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button2 from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import Following from "../Notifications/Following";
+import Follower from "../Notifications/Follower";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -12,7 +12,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 1000,
+  width: 800,
   boxShadow: 24,
 };
 export default function OutlinedButtons(props) {
@@ -35,7 +35,7 @@ export default function OutlinedButtons(props) {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            <Following followingID={followingID}/>
+            <Follower />
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}></Typography>
         </Box>
