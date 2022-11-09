@@ -6,6 +6,7 @@ import Hearticon from "../../Hearticon";
 import { useState, useRef, useEffect } from "react";
 import IterMap from "../../IterMap/IterMap"
 import axios from "axios";
+import Comment from "../../Comment"
 
 function Pclick_content(props) {
   
@@ -17,8 +18,10 @@ function Pclick_content(props) {
   let commentInfo;
   let commentIDu = [];
   const [commentID, setCommentID] = useState([]);
+  const [commentID2, setCommentID2] = useState("");
   let cmtContentu = [];
   const [cmtContent, setcmtContent] = useState([]);
+  const [cmtContent2, setcmtContent2] = useState("");
   
 
   async function getComment(){
@@ -32,10 +35,16 @@ function Pclick_content(props) {
       console.log(result.data.commentInfo);
       
       commentInfo = result.data.commentInfo;
+      setCommentID2(comment.current.value);
+      setcmtContent2(result.data.ccommentInfo.user_id);
 
       result.data.commentInfo.map(function(data, index){          
-        commentIDu.push(data.user_id + " : " + data.cmt_content);
+        commentIDu.push(data.user_id);
         setCommentID(commentID.concat(commentIDu));
+        
+        cmtContentu.push(data.cmt_content);
+        setcmtContent(cmtContent.concat(cmtContentu));
+        
       })
     })
     .catch(() => {
@@ -103,6 +112,7 @@ function Pclick_content(props) {
     })
     .then((result) => {
       console.log("데이터 보내기 성공!", result);
+
     })
     .catch(() => {
       console.log("데이터 보내기 실패!");
@@ -113,7 +123,7 @@ function Pclick_content(props) {
   useEffect(() => {
     getComment();
 
-  }, [])
+  },[])
 
   return (
     <>
@@ -146,15 +156,10 @@ function Pclick_content(props) {
                           </div>
                         </div>
 
-                      <div className="clickcomments">
+                      <div className="clickcomments">                    
                         <div className="commentContainer">
-                          {commentID.map(function(data, index){
-                            return (<>
-                            
-                            <div className="accountName" ><p style={{width:"200px", height:"200px"}}>{data}</p></div>
-                            
-                            </>)})}
-                          
+                          <div className="accountName">{commentID2}</div>
+                          <div className="comment">{cmtContent2}</div>
                         </div>
                       </div>
 

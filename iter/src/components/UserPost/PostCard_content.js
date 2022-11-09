@@ -11,9 +11,16 @@ function PostCard_content(props) {
   const { storyBorder, image } = props;
   const imgInput = useRef();
   const postInput = useRef();
-  function imgUpload() {
+  const [imageData, setImageData] = useState("");
+
+  const srcChange = (e) => {
+    setImageData(URL.createObjectURL(e.target.files[0]));
+  };
+
+  function imgUpload(e) {
     imgInput.current.click();
-  }
+  };
+
   function goSubmit() {
     postInput.current.click();
   }
@@ -27,7 +34,7 @@ function PostCard_content(props) {
       <div className="postbackground">
         <div className="postcard2">
           <div className="card">
-            <img className="cardImage" alt="card content" />
+            <img className="cardImage" alt="card content" src={imageData}/>
           </div>
           <div className="contentzz">
             <div className="post_header">
@@ -38,6 +45,7 @@ function PostCard_content(props) {
                   accept="image/*"
                   ref={imgInput}
                   name="jeju"
+                  onChange={srcChange}
                   style={{ display: "none" }}
                 ></input>
                 <BsPlusCircle
