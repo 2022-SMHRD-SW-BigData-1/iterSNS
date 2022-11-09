@@ -13,6 +13,8 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import Alarm from "../Notifications/Alram";
+import UploadModal from "../UploadModal";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -32,9 +34,9 @@ function Menu() {
           <HomeIcon className="icon" fontSize="small" />
         </Link>
         {/* <Link to="#"><Inbox className="icon" /></Link> */}
-        <Link to="/PostCards">
-          <BsPlusSquare className="icon" fontSize="medium" />
-        </Link>
+
+        <BsPlusSquare className="icon" fontSize="medium" />
+        <UploadModal></UploadModal>
         <>
           <FavoriteBorderIcon
             onClick={handleOpen}
