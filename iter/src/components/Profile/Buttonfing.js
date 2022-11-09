@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button2 from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import Follower from "../Notifications/Follower";
+import Following from "../Notifications/Following";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -15,7 +15,8 @@ const style = {
   width: 1000,
   boxShadow: 24,
 };
-export default function OutlinedButtons() {
+export default function OutlinedButtons(props) {
+  const { followingID } = props
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -34,7 +35,7 @@ export default function OutlinedButtons() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            <Follower />
+            <Following followingID={followingID}/>
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}></Typography>
         </Box>
