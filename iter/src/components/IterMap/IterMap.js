@@ -122,7 +122,7 @@ const Itermap = () => {
         <button onClick={callUse}>검색</button>
         <button onClick={resetMap}>초기화</button>
         </div>
-        <div id="map" style={{width:"598px", height:"673px"}}></div>
+        <div id="map" style={{width:"350px", height:"326px"}}></div>
         </>
     );
 };

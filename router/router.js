@@ -103,7 +103,25 @@ router.post("/Userpost", upload.single("jeju"), function (request, response) {
 });
 
 router.post("/Comment", function (request, response) {
-  const comment = request.body.post;
+  const comment = request.body.comment;
+  const id = idqwe;
+  const idseq = seqwe;
+  const postseq = request.body.postseq;
+
+  console.log(comment);
+
+  let sql = "insert into t_comment(post_seq, user_seq, user_id, cmt_content) values(?, ?, ?, ?)";
+
+  conn.query(sql, [postseq, idseq, id, comment], function (err, rows) {
+    if (!err) {
+      console.log("댓글 DB 저장 완료!");
+      response.json({ result: "success", commentID: id, cmtContent: comment });
+    } else {
+      console.log("업로드 실패!" + err);
+    }
+  });
+
+
 });
 
 router.post("/getUser", function (request, response){
@@ -112,6 +130,20 @@ router.post("/getUser", function (request, response){
   conn.query(sql, function (err, rows) {
     if (rows.length > 0) {
       response.json({ result: "success", userInfo: rows });
+    } else {
+      console.log("로그인 실패");
+    }
+  });
+});
+
+router.post("/getMypage", function (request, response){
+
+  const id = idqwe;
+
+  let sql = "select * from t_post where user_id = ? order by post_date desc";
+  conn.query(sql, [id], function (err, rows) {
+    if (rows.length > 0) {
+      response.json({ result: "success", MyInfo: rows });
     } else {
       console.log("로그인 실패");
     }

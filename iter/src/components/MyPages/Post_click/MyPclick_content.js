@@ -1,10 +1,9 @@
-import "./pclick_content.scss";
-import Profile from "../../Profile/Profile";
-import { ReactComponent as Comments } from "../images/comments.svg";
+import "./mypclick_content.scss";
+import MyProfile from "../../Profile/MyProfile";
+import { ReactComponent as Comments } from "../../Main/images/comments.svg";
 import Bookmarkicon from "../../Bookmark";
 import Hearticon from "../../Hearticon";
 import { useState, useRef } from "react";
-import IterMap from "../../IterMap/IterMap"
 import axios from "axios";
 
 function Pclick_content(props) {
@@ -66,7 +65,7 @@ function Pclick_content(props) {
       console.log("데이터 보내기 실패!");
     });
   }
-  
+
   const toggleComment = async () =>{
 
     axios
@@ -86,6 +85,7 @@ function Pclick_content(props) {
   }
 
 
+
   return (
     <>
     <div className="clickcm">
@@ -98,7 +98,7 @@ function Pclick_content(props) {
         <div className="clickcards" >          
           <div className="Pclick_contentcard">
             <header className="Pclick_contentheader" >
-              <Profile userID={postUserId}/>
+              <MyProfile userID={postUserId}/>
               <button className="followbutton" style={style} onClick={toggleFollow}>follow</button>
             </header>
 
@@ -110,20 +110,19 @@ function Pclick_content(props) {
                       <div className="cardMenu">
                         <div className="interactions">
                         <Hearticon className="icon" like={like} onClick={toggleLike} />
-                          <Comments className="icon" />  
+                          <Comments className="icon" /> {postUserDate.slice(0,10)} {postUserDate.slice(11,19)}
+                          
                         </div>
-                          <div className="posttime">
-                            {postUserDate.slice(0,10)} {postUserDate.slice(11,19)}
-                          </div>
-                        </div>
+                        <Bookmarkicon className="icon" save={save} onClick={toggleSave} />
+                      </div>
 
                       <div className="clickcomments">
                         <div className="commentContainer">
-                          <div className="accountName">{commentID}</div>
+                        <div className="accountName">{commentID}</div>
                           <div className="comment">{cmtContent}</div>
                         </div>
                       </div>
-
+                    
                       <div className="clickaddComment">
                         <input ref={comment} className="clickcommentText" placeholder="Add a comment..."></input>
                         <button onClick={toggleComment} className="clickpostText" style={{color:"black"}}>Post</button>
@@ -132,7 +131,7 @@ function Pclick_content(props) {
                   </div>
                 </div>
               {/* ↓지도api들어갈 자리 */}
-              <div type="text" className="clickLocation" alt="card content"><IterMap /></div>
+              <div type="text" className="clickLocation" alt="card content" />
             </div>
           </div>
         </div>  

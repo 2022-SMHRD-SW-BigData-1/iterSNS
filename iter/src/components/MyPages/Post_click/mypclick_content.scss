@@ -1,0 +1,187 @@
+@import "../../../styles/variables";
+
+.clickcm {
+  width: 1000;
+  margin: auto;
+  margin-top: 4em;
+
+  .clickcontainer {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    // max-width: 800;
+    // width: 100vw;
+    // margin: 0 auto;
+    margin-left: 4em;
+    
+    background-color: lightyellow;
+    width: 868px;
+    height: 745px;
+    margin-top: 2em;
+    border-radius: 7px;
+    border: solid 2px;
+    
+
+    .clickcards {
+      width: 350px;
+      text-align: center;
+      float: left;
+      margin-right: 2em;
+      margin-top: 1.3em;
+      // margin: auto;
+    }
+  }
+}
+
+
+
+.Pclick_contentcard {
+  top: 20vh;
+  border: 1px solid $border-color-grey;
+  background-color: $background-white;
+  margin-bottom: 3.5em;
+  border-radius: 3px;
+  height: 700px;
+  max-height: 700px;
+  width: 349.5px;
+  max-width: 350px;
+
+  
+
+  .Pclick_contentheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em;
+    width: 350px;
+    
+
+    
+
+    .profile {
+      margin-bottom: 0;
+    }
+
+    .followbutton {
+      color: black;
+      background-color: lightyellow;
+      border-color: lightyellow;
+      margin-right: 18px;
+      border-radius: 10px;
+      
+    }
+  }
+  .clickText {
+    width: 350px;
+    height: 150px;
+    display: block;
+    border: solid 0.1px;
+    border-color: #dbdbdb;
+    
+
+    
+  }
+  .Pclick_cards {
+    width: 350px;
+    height: 280px;
+    
+  }
+  .clickLocation {
+    width: 350px;
+    height: 326px;
+    display: block;
+    
+    margin-top: 2.76em;
+    border: solid 0.1px;
+    border-color: #dbdbdb;
+  }
+}
+
+.cardss {
+  width: 350px;
+ 
+
+  .clickcard {
+    border: 1px solid $border-color-grey;
+    background-color: $background-white;
+    margin-bottom: 3.5em;
+    border-radius: 3px;
+    height: 170px;
+
+    .cardMenu {
+      display: flex;
+      justify-content: space-between;
+      margin: 1em 0;
+    
+      .interactions {
+        display: flex;
+        padding-left: 1em;
+      }
+    
+      .icon {
+        margin-right: 1em;
+        width: 23px;
+        height: 23px;
+    
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .clickcomments {
+      margin-bottom: 0.75em;
+
+      .commentContainer {
+        display: flex;
+        padding-left: 1.5em;
+        font-size: 0.75em;
+        margin-bottom: 0.4em;
+
+        .accountName {
+          font-weight: 600;
+        }
+      
+        .comment {
+          margin-left: 0.5em;
+        } 
+      }
+    }
+  }
+
+    .clickaddComment {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85em;
+      padding: 1.5em 1.25em;
+      margin-top: 3.5em;
+      margin-bottom: 1em;
+
+      .clickcommentText {
+        color: $font-color-secondary;
+      }
+
+      .clickpostText {
+        color: $link-color-secondary;
+      }
+    }
+  }
+
+
+  .Pclick_imgcard {
+    border: 1px solid $border-color-grey;
+    background-color: $background-white;
+    margin-bottom: 3.5em;
+    border-radius: 3px;
+    max-height: 1200px;
+    width: 455px;
+    margin-left: 30px;
+   
+  
+    .Pclick_imgcardImage {
+      width: 455px;
+      height: 700px;
+      display: block;
+    }
+  }
+
