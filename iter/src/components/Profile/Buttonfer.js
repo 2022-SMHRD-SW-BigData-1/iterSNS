@@ -2,13 +2,11 @@ import * as React from "react";
 import Button1 from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Follower from "../Notifications/Follower";
-
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
-
 const style = {
   position: "absolute",
   top: "50%",
@@ -17,12 +15,10 @@ const style = {
   width: 1000,
   boxShadow: 24,
 };
-
 export default function OutlinedButtons() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   return (
     <>
       <Stack direction="row" spacing={1}>

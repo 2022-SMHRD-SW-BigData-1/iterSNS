@@ -2,13 +2,11 @@ import * as React from "react";
 import Button2 from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Follower from "../Notifications/Follower";
-
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
-
 const style = {
   position: "absolute",
   top: "50%",
