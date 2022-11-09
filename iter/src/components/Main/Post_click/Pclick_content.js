@@ -3,19 +3,46 @@ import Profile from "../../Profile/Profile";
 import { ReactComponent as Comments } from "../images/comments.svg";
 import Bookmarkicon from "../../Bookmark";
 import Hearticon from "../../Hearticon";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import IterMap from "../../IterMap/IterMap"
 import axios from "axios";
 
 function Pclick_content(props) {
+  
   const { postSeq, postUserseq, postUserId, postUserDate, postUserLocation, postUsercontent, postUserLikes, postUserLikeState, postUserImg} = props;
   const [like, setlike] = useState(postUserLikeState);
   const [save, setsave] = useState(false);
   const [style, setStyle] = useState({display: 'block'})
   const comment = useRef();
-  const [commentID, setCommentID] = useState("");
-  const [cmtContent, setcmtContent] = useState("");
+  let commentInfo;
+  let commentIDu = [];
+  const [commentID, setCommentID] = useState([]);
+  let cmtContentu = [];
+  const [cmtContent, setcmtContent] = useState([]);
   
+
+  async function getComment(){
+
+    await axios
+    .post("http://127.0.0.1:3001/getComment", {
+      postseq: postSeq,
+    })
+    .then((result) => {
+      console.log("데이터 보내기 성공!", result);
+      console.log(result.data.commentInfo);
+      
+      commentInfo = result.data.commentInfo;
+
+      result.data.commentInfo.map(function(data, index){          
+        commentIDu.push(data.user_id + " : " + data.cmt_content);
+        setCommentID(commentID.concat(commentIDu));
+      })
+    })
+    .catch(() => {
+      console.log("데이터 보내기 실패!");
+    });
+
+  }
 
   //좋아요
   const toggleLike = async () => {
@@ -76,8 +103,6 @@ function Pclick_content(props) {
     })
     .then((result) => {
       console.log("데이터 보내기 성공!", result);
-      setCommentID(result.data.commentID);
-      setcmtContent(result.data.cmtContent);
     })
     .catch(() => {
       console.log("데이터 보내기 실패!");
@@ -85,6 +110,10 @@ function Pclick_content(props) {
     
   }
 
+  useEffect(() => {
+    getComment();
+
+  }, [])
 
   return (
     <>
@@ -118,8 +147,13 @@ function Pclick_content(props) {
 
                       <div className="clickcomments">
                         <div className="commentContainer">
-                          <div className="accountName">{commentID}</div>
-                          <div className="comment">{cmtContent}</div>
+                          {commentID.map(function(data, index){
+                            return (<>
+                            
+                            <div className="accountName" ><p style={{width:"200px", height:"200px"}}>{data}</p></div>
+                            
+                            </>)})}
+                          
                         </div>
                       </div>
 

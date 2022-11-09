@@ -115,15 +115,28 @@ router.post("/Comment", function (request, response) {
   conn.query(sql, [postseq, idseq, id, comment], function (err, rows) {
     if (!err) {
       console.log("댓글 DB 저장 완료!");
-      response.json({ result: "success", commentID: id, cmtContent: comment });
+    } else {
+      console.log("업로드 실패!" + err);
+    }
+  });
+});
+
+router.post("/getComment", function (request, response) {
+  const postseq = request.body.postseq;
+
+
+  let sql = "select * from t_comment where post_seq = ?"
+    
+  conn.query(sql, [postseq], function (err, rows) {
+    if (!err) {
+      console.log("댓글 DB 불러오기 성공!");
+      response.json({ result: "success", commentInfo: rows});
     } else {
       console.log("업로드 실패!" + err);
     }
   });
 
-
 });
-
 router.post("/getUser", function (request, response){
 
   let sql = "select * from t_post order by post_date desc";
