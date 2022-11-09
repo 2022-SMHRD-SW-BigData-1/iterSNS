@@ -27,7 +27,9 @@ const style = {
 
 
 const PInfo = (props) => {  
+
   const { followID, followingID } = props;
+  
   return (
     <div className="info">
       <div className="container">

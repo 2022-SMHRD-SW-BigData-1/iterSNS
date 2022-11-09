@@ -21,12 +21,15 @@ function MyCards() {
       .then((result) => {
         console.log("게시판 데이터 보내기 성공!");
                         
-        result.data.userInfo.map(function(data, index){          
+        result.data.followInfo.map(function(data, index){          
         myFollowID.push(data.follow_id);
         setumyFollowID(umyFollowID.concat(myFollowID));
-  
+        console.log(data.follow_id)
         myFollowingID.push(data.user_id);
+        console.log(data.user_id)
         setumyFollowingID(umyFollowingID.concat(myFollowingID));
+
+        
         })
         
         
@@ -48,7 +51,8 @@ function MyCards() {
   return (
     <>
       <Navigation />
-      <PInfo />
+      {console.log(umyFollowingID)}
+      <PInfo umyFollowID={umyFollowID} umyFollowingID={umyFollowingID}/>
       <div className="mycm">
         <div className="mycontainer" >
 

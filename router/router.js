@@ -199,11 +199,13 @@ router.post("/Follow", function (request, response){
 router.post("/GetFollow", function (request, response){
   const id = idqwe;
   const seq = seqwe;
+  console.log(id);
 
-  let sql = `select * from t_follow where user_id = ${id}`;
+  let sql = `select * from t_follow where user_id = (?)`;
 
-  conn.query(sql, function (err, rows) {
+  conn.query(sql,[id], function (err, rows) {
     if (rows.length>0) {
+      
       console.log("팔로우 데이터 불러오기!");
       response.json({ result: "success", followInfo: rows });
 
