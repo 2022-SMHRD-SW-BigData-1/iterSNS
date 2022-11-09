@@ -90,11 +90,12 @@ function Pclick_content(props) {
                       <div className="cardMenu">
                         <div className="interactions">
                         <Hearticon className="icon" like={like} onClick={toggleLike} />
-                          <Comments className="icon" /> {postUserDate.slice(0,10)} {postUserDate.slice(11,19)}
-                          
+                          <Comments className="icon" />  
                         </div>
-                        <Bookmarkicon className="icon" save={save} onClick={toggleSave} />
-                      </div>
+                          <div className="posttime">
+                            {postUserDate.slice(0,10)} {postUserDate.slice(11,19)}
+                          </div>
+                        </div>
 
                       <div className="clickcomments">
                         <div className="commentContainer">

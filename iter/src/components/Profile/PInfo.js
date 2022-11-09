@@ -51,13 +51,14 @@ const PInfo = (props) => {
               </span>
           </div>
           <div className="profileChange">
-            <button className="save">
+            {/* <button className="save">
               <Link to="/Save">
                 <BsBookmarks className="BsBookmarks" size={20}></BsBookmarks>
               </Link>
-            </button>
+            </button> */}
             <button className="buttonprofile">
-              프로필편집 <BsGear className="Bsgear" size={20}></BsGear>
+              프로필편집
+              <BsGear className="Bsgear" size={20}></BsGear> 
             </button>
           </div>
         </div>
