@@ -34,8 +34,8 @@ function PostCard_content(props) {
       <div className="postbackground">
         <div className="postcard2">
           <div className="card">
-            <img className="cardImage" alt="card content" src={imageData}/>
           </div>
+            <img className="cardImage" alt="card content" src={imageData}/>
           <div className="contentzz">
             <div className="post_header">
               <header>

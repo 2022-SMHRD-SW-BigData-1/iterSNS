@@ -35,8 +35,6 @@ function Pclick_content(props) {
       console.log(result.data.commentInfo);
       
       commentInfo = result.data.commentInfo;
-      setCommentID2(comment.current.value);
-      setcmtContent2(result.data.ccommentInfo.user_id);
 
       result.data.commentInfo.map(function(data, index){          
         commentIDu.push(data.user_id);
@@ -72,21 +70,7 @@ function Pclick_content(props) {
 
   };
 
-  //게시글저장;
-  const toggleSave = async () => {
-    // const response = await axios.post("http://127.0.0.1:3001/Save");
-    setsave(!save);
-
-    await axios
-      .post("http://127.0.0.1:3001/Save", {})
-      .then((result) => {
-        console.log("데이터 보내기 성공!", result);
-      })
-      .catch(() => {
-        console.log("데이터 보내기 실패!");
-      });
-  };
-
+  //팔로우
   const toggleFollow = async (e) => {
 
     setStyle({display: 'none'})
@@ -103,6 +87,7 @@ function Pclick_content(props) {
     });
   }
   
+  //댓글저장
   const toggleComment = async () =>{
 
     axios
@@ -112,6 +97,8 @@ function Pclick_content(props) {
     })
     .then((result) => {
       console.log("데이터 보내기 성공!", result);
+      setCommentID2(result.data.id);
+      setcmtContent2(comment.current.value);
 
     })
     .catch(() => {
@@ -143,7 +130,7 @@ function Pclick_content(props) {
 
             <div className="Pclick_contentcontent">
               <div className="Pclick_cards">
-                <div className="clickText">{postUsercontent}<br /><br /><br /><br /><br />위치 : {postUserLocation}</div>
+                <div className="clickText">{postUsercontent}<br></br><br></br><br></br>위치<br/>{postUserLocation}</div>
                   <div className="cardss">
                     <div className="clickcard">
                       <div className="cardMenu">
@@ -171,7 +158,7 @@ function Pclick_content(props) {
                   </div>
                 </div>
               {/* ↓지도api들어갈 자리 */}
-              <div type="text" className="clickLocation" alt="card content"><IterMap /></div>
+              <div type="text" className="clickLocation" alt="card content"><IterMap postlocation={postUserLocation} /></div>
             </div>
           </div>
         </div>  

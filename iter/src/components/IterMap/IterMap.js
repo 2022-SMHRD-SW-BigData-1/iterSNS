@@ -3,8 +3,9 @@ import "./itermap.scss"
 const { kakao } = window;
 
 
-const Itermap = () => {
-    let temp;
+const Itermap = (props) => {
+    const { postlocation } = props
+    let temp="";
     const [lat, setLat] = useState(35.1782720807211);
     const [lon, setLon] = useState(126.90176721598525);
     const [searchValue, setsearchValue] = useState("");
@@ -27,17 +28,23 @@ const Itermap = () => {
 
     // 검색 상자 안 밸류값 받아오기
     function changeLocation(e){
-        temp = e.target.value;
+            temp = e.target.value;
     }
 
     // 검색 버튼을 클릭 시 검색한 장소 지도에 마커
     function callUse(){
-        setsearchValue(temp);
+        if(temp===""){
+            setsearchValue(postlocation);
+        } else{
+            setsearchValue(temp);
+        }
     }
     
     // 초기화 버튼
     function resetMap(){
+        
         input.value = null;
+        temp = "";
         setsearchValue("");
     }
 
@@ -61,7 +68,7 @@ const Itermap = () => {
         let container = document.getElementById("map");
         let options = {
             center: new kakao.maps.LatLng(lat, lon),
-            level: 1
+            level: 3
         };
         let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
@@ -95,10 +102,10 @@ const Itermap = () => {
                 position: place
             });
 
-            let infowindow = new kakao.maps.InfoWindow({
-                content : '<div style="width:150px;text-align:center;padding:6px 0;">ㅋㅋㄹ~</div>'
-            });
-            infowindow.open(map, marker);
+            // let infowindow = new kakao.maps.InfoWindow({
+            //     content : `<div style="width:150px;text-align:center;padding:6px 0;">${temp}</div>`
+            // });
+            // infowindow.open(map, marker);
 
             // // 마커에 클릭이벤트를 등록합니다
             // kakao.maps.event.addListener(marker, 'click', function() {
@@ -116,8 +123,8 @@ const Itermap = () => {
     return(
         <>
         <div className="bu">
-        <input type="text" id="input" onChange={changeLocation}></input>
-        <button onClick={callUse}>검색</button>
+        <input type="text" id="input" placeholder="빈 공간 검색시 사진 위치로" onChange={changeLocation}></input>
+        <button onClick={callUse} >검색</button>
         <button onClick={resetMap}>초기화</button>
         </div>
         <div id="map"></div>

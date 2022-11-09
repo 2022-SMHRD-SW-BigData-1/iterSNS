@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../styles/variables";
 
 .postcard2 {
   margin-top: 20px;
@@ -13,18 +13,19 @@
   width: 580px;
   height: 573px;
   border: 1px solid #dbdbdb;
+
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75em;
-    width: 324px;
+    width: 330px;
     float: right;
     margin-left: 0;
-    margin-top: 47.8px;
+    margin-top: -22px;
     background-color: white;
-    height: 29px;
-    margin-right: 230px;
+    height: 35px;
+    margin-right: -6px;
     border-top-right-radius: 10px;
     border: 1px solid #dbdbdb;
     .profile {
@@ -65,8 +66,8 @@
   position: relative;
   margin: auto;
   // left:100%;
-  
   width:350px;
+  // top:-557px; //이미지올리고 이거 건들기
 }
 .contentzz {
   // margin-top: auto;
@@ -74,7 +75,6 @@
   // position: relative;
   margin:auto;
   margin-left:100%;
-  
   // bottom: 110.9%;
 }
 .cardText {

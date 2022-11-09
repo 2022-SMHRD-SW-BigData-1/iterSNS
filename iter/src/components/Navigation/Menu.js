@@ -28,16 +28,13 @@ function Menu() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
+  <>
     <div className="menubox">
       <div className="menu">
         <Link to="/MainView">
           <HomeIcon className="icon" fontSize="small" />
         </Link>
-        {/* <Link to="#"><Inbox className="icon" /></Link> */}
-
-        {/* <BsPlusSquare className="icon" fontSize="medium" /> */}
-        <UploadModal></UploadModal>
-        <>
+        <UploadModal/>
           <FavoriteBorderIcon
             onClick={handleOpen}
             className="icon"
@@ -59,7 +56,6 @@ function Menu() {
               ></Typography>
             </Box>
           </Modal>
-        </>
         <Link to="/MyPages">
           <MyProfileIcon className="icon" fontSize="small" />
         </Link>
@@ -68,6 +64,7 @@ function Menu() {
         </Link>
       </div>
     </div>
+  </>
   );
 }
 export default Menu;

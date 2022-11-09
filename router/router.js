@@ -115,6 +115,7 @@ router.post("/Comment", function (request, response) {
   conn.query(sql, [postseq, idseq, id, comment], function (err, rows) {
     if (!err) {
       console.log("댓글 DB 저장 완료!");
+      response.json({ result: "success", id: id});
     } else {
       console.log("업로드 실패!" + err);
     }
