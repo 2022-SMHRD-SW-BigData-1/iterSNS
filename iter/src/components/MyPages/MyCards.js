@@ -10,8 +10,8 @@ function MyCards() {
 
   let myFollowID = [];
   const [umyFollowID, setumyFollowID] = useState([]);
-  let myFollowingID = [];
-  const [umyFollowingID, setumyFollowingID] = useState([]);
+  let myFollowerID = [];
+  const [umyFollowerID, setumyFollowerID] = useState([]);
   
   async function getFollow() {
     console.log("DB에서 ID값 가져오기!");
@@ -22,15 +22,17 @@ function MyCards() {
         console.log("게시판 데이터 보내기 성공!");
                         
         result.data.followInfo.map(function(data, index){          
-        myFollowID.push(data.follow_id);
-        setumyFollowID(umyFollowID.concat(myFollowID));
-        console.log(data.follow_id)
-        myFollowingID.push(data.user_id);
-        console.log(data.user_id)
-        setumyFollowingID(umyFollowingID.concat(myFollowingID));
+          myFollowID.push(data.follow_id);
+          setumyFollowID(umyFollowID.concat(myFollowID));
+        });
+
+        result.data.followerInfo.map(function(data, index){
+          myFollowerID.push(data.user_id);
+          setumyFollowerID(umyFollowerID.concat(myFollowerID));
+        });
 
         
-        })
+        
         
         
       }) // axios로 보낼 위치에 데이터 보내기를 성공하면 then
@@ -51,8 +53,7 @@ function MyCards() {
   return (
     <>
       <Navigation />
-      {console.log(umyFollowingID)}
-      <PInfo umyFollowID={umyFollowID} umyFollowingID={umyFollowingID}/>
+      <PInfo followID={umyFollowID} followerID={umyFollowerID}/>
       <div className="mycm">
         <div className="mycontainer" >
 

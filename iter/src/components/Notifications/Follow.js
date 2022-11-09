@@ -13,9 +13,8 @@ import ListItem from '@mui/material/ListItem';
 import Button from '@mui/material/Button';
 import "./follower.scss";
 import ButtonGroup from '@mui/material/ButtonGroup';
-
 export default function NestedList(props) {
-  const { followingID } = props;
+  const { followID } = props
   const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
@@ -25,9 +24,26 @@ export default function NestedList(props) {
   return (
     <>
  
-  <List id='MainList'
+    <List id='MainList'
       component="nav"
       aria-labelledby="nested-list-subheader">
+    
+     
+    {/* 팔로워 팔로잉 스위치 버튼 */}
+    {/* <Collapse in={open} timeout="auto" unmountOnExit>
+      <List component="div" disablePadding>
+          <Divider variant="inset" component="li" />
+            <ListItem alignItems="center" id='followerbutton'>
+              <ButtonGroup variant="text" aria-label="text button group" >
+                <Button variant="contained" size='large' color="info" >팔로워</Button>
+                <Button variant="outlined" size='large' color="info" >팔로잉</Button>
+              </ButtonGroup>
+            </ListItem>
+      </List>
+    </Collapse> */}
+
+
+
 
     {/* 첫번째 팔로워 팔로잉 */}
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -39,10 +55,11 @@ export default function NestedList(props) {
                         {/* alt 팔로워 팔로잉 이름 src 프로필 사진 경로*/}
                     </ListItemAvatar>
                 <ListItemText className='listtext'
-                primary={followingID}/>
+                primary={followID}/>           
             </ListItem>
         </List>
       </Collapse>
+
     </List>
    
     </>
