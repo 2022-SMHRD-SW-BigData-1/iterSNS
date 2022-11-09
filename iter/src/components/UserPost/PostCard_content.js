@@ -31,7 +31,7 @@ function PostCard_content(props) {
           <div className="contentzz">
           <div className="post_header">
             <header>
-              <MyProfile iconSize="medium" storyBorder={storyBorder} />
+              {/* <MyProfile iconSize="medium" storyBorder={storyBorder} /> */}
               
               <BsImage className="BsImage" onClick={imgUpload}></BsImage>
               <input type="file" accept="image/*" ref={imgInput} name="jeju" style={{display:"none"}}></input>
@@ -39,7 +39,6 @@ function PostCard_content(props) {
               <BsPlusCircle type="submit" className="BsPlusCircle" onClick={goSubmit}></BsPlusCircle>
               <button style={{display:"none"}} ref={postInput}></button>
             </header>
-          </div>
             <input
               type="text"
               className="cardText"
@@ -52,6 +51,8 @@ function PostCard_content(props) {
               alt="card content"
               name="loacationtext"
             />
+          </div>
+            
           </div>
         </div>
       </form>

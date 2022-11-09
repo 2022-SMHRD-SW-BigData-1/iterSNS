@@ -14,7 +14,7 @@
   // max-height: 1200px;
   // width: 357px;
   width: 580px;
-  height: 573px;
+  height: 580px;
   header {
     display: flex;
     justify-content: space-between;
@@ -24,6 +24,9 @@
     float: right;
     margin-left: 0;
     margin-top: auto;
+    border: 1px solid; 
+    border-color: rgb(118, 118, 118);
+
     
     
 
