@@ -12,6 +12,7 @@ import Avatar from "@mui/material/Avatar";
 import ListItem from "@mui/material/ListItem";
 import Button from "@mui/material/Button";
 import "./alram.scss";
+import { Link } from "react-router-dom";
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -34,24 +35,10 @@ export default function NestedList() {
  
     <List className='MainList'
       component="nav"
-      aria-labelledby="nested-list-subheader">
-      <ListItemButton onClick={handleClick} id='AheaderClick'>
-        <ListItemText primary="알림" id='Aheader'/>
-        {/* 맨상단 제목부분 */}
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-     
-    {/* 팔로워 팔로잉 스위치 버튼 */}
-    <Collapse in={open} timeout="auto" unmountOnExit>
-      <List component="div" disablePadding>
-          <Divider variant="inset" component="li" />
-            <ListItem alignItems="center" id='Afollowerbutton'>
-              <Link to="/MainView">
-                <Button variant="contained" size='large'>메인</Button>
-              </Link>
-            </ListItem>
-      </List>
-    </Collapse>
+      aria-labelledby="nested-list-subheader"
+      sx={style}
+      >
+      
 
         {/* 첫번째 알림 */}
         <Collapse in={open} timeout="auto" unmountOnExit>

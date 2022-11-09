@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import CardContent from '@mui/material/CardContent';
 import { useState, useEffect } from "react";
 
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -35,16 +36,19 @@ function MainCard(props) {
   return (
     <>
       <Button onClick={handleOpen}>
-        <div className="maincard">
+        
+        <div className="maincard" style={{backgroundColor:"white", width:"290px", height:"400px", border:"2px solid", color:"black"}}  >
           <header className="mainheader">
             <Profile
               className="mainProfile"
               iconSize="medium"
               userID={postUserId}
+              
             />
           </header>
-          <img className="maincardImage" src={postUserImg} alt="card content" />
+          <img className="maincardImage" src={postUserImg} alt="card content" style={{marginTop:"8px",width:"250px",height:"310px"}}/>
         </div>
+       
       </Button>
 
       <div>

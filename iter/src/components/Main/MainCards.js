@@ -3,6 +3,7 @@ import MainCard from "./MainCard";
 import Navigation from "../Navigation/Navigation";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import logo from "../Navigation/images/logowhite2.png"
 
 function MainCards() {
   let encode;
@@ -88,6 +89,7 @@ function MainCards() {
   return (
     <>
       <Navigation></Navigation>
+      <div style={{height:'150px'}}></div>
       <div className="maincm">
         <div className="maincontainer">
           <div className="maincards">

@@ -1,6 +1,6 @@
 import "./navigation.scss";
 import Menu from "./Menu";
-import logo from "./images/logowhite3.png";
+import logo from "../Login/images/mainlogo.png";
 import { Link } from "react-router-dom"
 // Search icon
 import IconButton from '@mui/material/IconButton';

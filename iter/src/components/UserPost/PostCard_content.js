@@ -57,7 +57,7 @@ function PostCard_content(props) {
             />
           </div>
             
-          </div>
+          
         </div>
       </form>
     </>
