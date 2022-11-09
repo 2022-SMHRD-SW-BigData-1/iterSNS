@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 import Pclick_content from "./Post_click/Pclick_content";
 import Typography from "@mui/material/Typography";
 import CardContent from '@mui/material/CardContent';
-import { useState, useEffect } from "react";
+
 
 
 const style = {
